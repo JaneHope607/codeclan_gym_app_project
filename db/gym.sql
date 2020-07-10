@@ -21,3 +21,9 @@ CREATE TABLE classes (
     membership_needed VARCHAR(255),
     spaces_left INT
 );
+
+CREATE TABLE bookings (
+    id SERIAL PRIMARY KEY,
+    class_id INT REFERENCES classes(id),
+    member_id INT REFERENCES members(id)
+);
