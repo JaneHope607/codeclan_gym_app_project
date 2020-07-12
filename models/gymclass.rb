@@ -39,4 +39,10 @@ class GymClass
         return data.map {|gym_class| GymClass.new(gym_class) }
     end
 
+    # Method to update gym class
+
+    def update()
+        
+    end
+
 end

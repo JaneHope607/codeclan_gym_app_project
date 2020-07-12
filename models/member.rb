@@ -39,6 +39,9 @@ class Member
         return data.map { |member| Member.new(member) }
     end
 
+    # Method to update member
+
+
 
 end
 

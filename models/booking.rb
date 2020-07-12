@@ -37,4 +37,15 @@ class Booking
         return data.map { |booking| Booking.new(booking) }
     end
 
+    # Method to update booking 
+    
+    def update()
+        sql = "UPDATE bookings
+        SET (gymclass_id, member_id)
+        = ($1, $2)
+        WHERE id = $3"
+        values = [@gymclass_id, @member_id, @id]
+        SqlRunner.run(sql, values)
+    end
+
 end
