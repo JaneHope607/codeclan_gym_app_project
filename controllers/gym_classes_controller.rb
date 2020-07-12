@@ -28,7 +28,7 @@ end
 post '/classes' do
     @gym_class = GymClass.new(params)
     @gym_class.save()
-    redirect to '/classes'
+    redirect to "/classes"
 end
 
 # EDIT
@@ -43,7 +43,7 @@ end
 post '/classes/:id' do
     gym_class = GymClass.new(params)
     gym_class.update()
-    redirect to '/classes'
+    redirect to "/classes/#{params['id']}"
 end
 
 # DELETE
@@ -52,5 +52,5 @@ post '/classes/:id/delete' do
     gym_class = GymClass.find_by_id(params['id'].to_i)
     gym_class.delete_members()
     gym_class.delete()
-    redirect to '/classes'
+    redirect to "/classes"
 end
