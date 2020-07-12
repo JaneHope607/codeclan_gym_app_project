@@ -78,8 +78,17 @@ class Member
     end
 
     def booked_gym_classes()
+        sql = "SELECT gym_classes.*
+        FROM gym_classes
+        INNER JOIN bookings
+        ON bookings.gymclass_id
+        = gymclass.id
+        WHERE bookings.member_id = $1;"
+        values = [@id]
+        results = SqlRunner.run(sql, values)
+        return Member.new(results) 
     end
-    
+
 end
 
 
