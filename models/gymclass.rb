@@ -51,4 +51,6 @@ class GymClass
         SqlRunner.run(sql, values)
     end
 
+    def 
+
 end

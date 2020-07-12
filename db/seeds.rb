@@ -3,6 +3,10 @@ require_relative("../models/gymclass.rb")
 require_relative("../models/booking.rb")
 require("pry-byebug")
 
+Booking.delete_all()
+Member.delete_all()
+GymClass.delete_all()
+
 member1 = Member.new({
     "first_name" => "Jessica",
     "last_name" => "Smith",
@@ -114,11 +118,11 @@ booking4.save()
 booking5.save()
 booking6.save()
 
-member1.email = "Jane"
-member1.update()
+# member1.first_name = "Jane"
+# member1.update()
 
-gymclass2.duration = '35'
-gymclass2.update()
+# gymclass2.duration = '35'
+# gymclass2.update()
 
 binding.pry
 nil
