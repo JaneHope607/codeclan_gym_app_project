@@ -51,6 +51,18 @@ class GymClass
         SqlRunner.run(sql, values)
     end
 
-    def 
+    # Methods to delete gym class and delete all
+
+    def self.delete_all()
+        sql = "DELETE FROM gym_classes"
+        SqlRunner.run(sql)
+    end
+
+    def delete()
+        sql = "DELETE FROM gym_classes
+        WHERE id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
 
 end
