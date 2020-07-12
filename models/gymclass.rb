@@ -86,4 +86,12 @@ class GymClass
         return Member.map_items(results)
     end
 
+    def get_remaining_spaces()
+        @capacity -= members.count()
+    end
+
+    def reduce_capacity()
+        @capacity -= 1
+    end
+
 end
