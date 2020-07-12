@@ -25,6 +25,20 @@ class Member
         @id = results['id'].to_i
     end
 
+    # Method to find all members
+
+    def self.find_all()
+        sql = "SELECT * FROM members"
+        results = SqlRunner.run(sql)
+        return Member.map_items(results)
+    end
+
+    # Mapping method
+
+    def self.map_items(data)
+        return data.map { |member| Member.new(member) }
+    end
+
 
 end
 
