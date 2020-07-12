@@ -25,4 +25,18 @@ class GymClass
         @id = results['id'].to_i
     end
 
+    # Method to find all gym classes
+
+    def self.find_all()
+        sql = "SELECT * FROM gym_classes"
+        results = SqlRunner.run(sql)
+        return GymClass.map_items(results)
+    end
+
+    # Mapping method
+
+    def self.map_items(data)
+        return data.map {|gym_class| GymClass.new(gym_class) }
+    end
+
 end
