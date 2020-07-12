@@ -12,7 +12,19 @@ class Member
         @email = options['email']
     end
 
-    def save
+    # Method to save members
+
+    def save()
+        sql = "INSERT INTO members
+        (first_name, last_name, dob, email)
+        VALUES
+        ($1, $2, $3, $4)
+        RETURNING id"
+        values = [@first_name, @last_name, @dob, @email]
+        results = SqlRunner.run(sql, values).first
+        @id = results['id'].to_i
+        end
+    end
 
 
 end
