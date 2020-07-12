@@ -39,7 +39,7 @@ class Member
         WHERE id = $1"
         values = [id]
         results = SqlRunner.run(sql, values).first
-        return GymClass.new(results)
+        return Member.new(results)
     end
 
     # Mapping method
@@ -73,6 +73,13 @@ class Member
         SqlRunner.run(sql, values)
     end
 
+    def full_name()
+        return "#{@first_name.capitalize} #{@last_name.capitalize}"
+    end
+
+    def booked_gym_classes()
+    end
+    
 end
 
 
