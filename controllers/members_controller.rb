@@ -50,6 +50,7 @@ end
 
 post '/members/:id/delete' do
     member = Member.find_by_id(params['id'].to_i)
+    member.delete_bookings()
     member.delete()
     redirect to '/members'
 end

@@ -91,6 +91,13 @@ class Member
         return GymClass.map_items(results)
     end
 
+    def delete_bookings()
+        sql = "DELETE FROM bookings
+        WHERE bookings.member_id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
+
 end
 
 

@@ -3,14 +3,14 @@
     <p>Date Of Birth: <%= member.dob%></p>
     <p>Contact Email: <%= member.email%></p>
     <p><a href="/members/<%= member.id %>">See more details</a></p>
-    <hr/>
 
-    <form method="post" action="/members/<%= member.id%>/edit">
+    <form method="get" action="/members/<%=member.id%>/edit">
         <input type="submit" value="Update Member"/>
     </form>
 
-    <form method="post" action="/members/<%= member.id%>/delete">
+    <form method="post" action="/members/<%=member.id%>/delete">
         <input type="submit" value="Deactivate Member"/>
     </form>
+    <hr/>
 
 <% end %>
