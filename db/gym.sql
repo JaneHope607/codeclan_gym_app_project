@@ -24,6 +24,6 @@ CREATE TABLE classes (
 
 CREATE TABLE bookings (
     id SERIAL PRIMARY KEY,
-    gym_class_id INT REFERENCES classes(id),
+    gymclass_id INT REFERENCES classes(id),
     member_id INT REFERENCES members(id)
 );
