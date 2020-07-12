@@ -40,3 +40,9 @@ end
 
 # UPDATE
 
+post '/members/:id' do
+    member = Member.new(params)
+    member.update()
+    redirect to("/members")
+end
+
