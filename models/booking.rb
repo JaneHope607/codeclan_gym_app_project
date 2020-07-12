@@ -71,4 +71,22 @@ class Booking
         SqlRunner.run(sql, values)
     end
 
+    # Method to get member and gym class for booking
+
+    def member()
+        sql = "SELECT * FROM
+        members WHERE id = $1"
+        values = [@member_id]
+        results = SqlRunner.run(sql, values).first
+        return Member.new(results)
+    end
+
+    def gym_class()
+        sql = "SELECT * FROM
+        gym_classes WHERE id = $1"
+        values = [@gymclass_id]
+        results = SqlRunner.run(sql, values).first
+        return GymClass.new(results)
+    end
+
 end
