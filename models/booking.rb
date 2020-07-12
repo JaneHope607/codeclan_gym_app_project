@@ -9,3 +9,6 @@ class Booking
         @gym_class_id = options['gym_class_id'].to_i
         @member_id = options['member_id'].to_i
     end
+
+
+end
