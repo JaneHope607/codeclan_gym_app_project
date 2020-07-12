@@ -103,7 +103,7 @@ booking4 = Booking.new({
 
 booking5 = Booking.new({
     "gymclass_id" => gymclass5.id,
-    "member_id" => member4.id
+    "member_id" => member2.id
 })
 
 booking6 = Booking.new({

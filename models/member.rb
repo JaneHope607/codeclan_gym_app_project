@@ -77,16 +77,18 @@ class Member
         return "#{@first_name.capitalize} #{@last_name.capitalize}"
     end
 
+    # Method to find all gym classes a member is signed up for
+
     def booked_gym_classes()
         sql = "SELECT gym_classes.*
         FROM gym_classes
         INNER JOIN bookings
         ON bookings.gymclass_id
-        = gymclass.id
+        = gym_classes.id
         WHERE bookings.member_id = $1;"
         values = [@id]
         results = SqlRunner.run(sql, values)
-        return Member.new(results) 
+        return GymClass.map_items(results)
     end
 
 end
