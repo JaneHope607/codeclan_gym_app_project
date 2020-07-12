@@ -16,6 +16,13 @@ get '/classes/new' do
     erb(:"gym_classes/new")
 end
 
+# SHOW
+
+get '/classes/:id' do
+    @gym_class = GymClass.find_by_id(params['id'].to_i)
+    erb(:"gym_classes/show")
+end
+
 # CREATE 
 
 post '/classes' do
