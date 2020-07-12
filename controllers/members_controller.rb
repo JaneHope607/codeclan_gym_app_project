@@ -43,7 +43,7 @@ end
 post '/members/:id' do
     member = Member.new(params)
     member.update()
-    redirect to '/members'
+    redirect to "/members/#{params['id']}"
 end
 
 # DELETE
@@ -52,7 +52,7 @@ post '/members/:id/delete' do
     member = Member.find_by_id(params['id'].to_i)
     member.delete_bookings()
     member.delete()
-    redirect to '/members'
+    redirect to "/members"
 end
 
 # SHOW ALL BOOKINGS FOR MEMBER
