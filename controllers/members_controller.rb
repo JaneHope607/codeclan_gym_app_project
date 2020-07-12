@@ -7,3 +7,8 @@ get '/members' do
     @members = Member.find_all()
     erb(:"members/index")
 end
+
+get '/members/:id' do
+    @member = Member.find(params[:id.to_i])
+    erb(:show)
+end
