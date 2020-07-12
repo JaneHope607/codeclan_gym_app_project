@@ -20,7 +20,21 @@ class Booking
         RETURNING id"
         values = [@gymclass_id, @member_id]
         results = SqlRunner.run(sql, values).first
-        @id = results]['id'].to_i
+        @id = results['id'].to_i
+    end
+
+    # Method to find all bookings
+
+    def self.find_all()
+        sql = "SELECT * FROM bookings"
+        results = SqlRunner.run(sql)
+        return Booking.map_items(results)
+    end
+
+    # Mapping method
+
+    def self.map_items(data)
+        return data.map { |booking| Booking.new(booking) }
     end
 
 end

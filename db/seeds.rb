@@ -77,3 +77,44 @@ gymclass2.save()
 gymclass3.save()
 gymclass4.save()
 gymclass5.save()
+
+booking1 = Booking.new({
+    "gymclass_id" => gymclass3.id,
+    "member_id" => member1.id
+})
+
+booking2 = Booking.new({
+    "gymclass_id" => gymclass5.id,
+    "member_id" => member4.id
+})
+
+booking3 = Booking.new({
+    "gymclass_id" => gymclass1.id,
+    "member_id" => member2.id
+})
+
+booking4 = Booking.new({
+    "gymclass_id" => gymclass2.id,
+    "member_id" => member3.id
+})
+
+booking5 = Booking.new({
+    "gymclass_id" => gymclass5.id,
+    "member_id" => member4.id
+})
+
+booking6 = Booking.new({
+    "gymclass_id" => gymclass4.id,
+    "member_id" => member1.id
+})
+
+booking1.save()
+booking2.save()
+booking3.save()
+booking4.save()
+booking5.save()
+booking6.save()
+
+
+binding.pry
+nil
