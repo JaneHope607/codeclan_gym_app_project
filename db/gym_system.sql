@@ -15,8 +15,7 @@ CREATE TABLE gym_classes (
     name VARCHAR(255),
     duration INT,
     instructor VARCHAR(255),
-    capacity INT,
-    spaces_left INT
+    capacity INT
 );
 
 CREATE TABLE bookings (
