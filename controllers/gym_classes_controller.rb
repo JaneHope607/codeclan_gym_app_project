@@ -30,3 +30,10 @@ post '/classes' do
     @gym_class.save()
     redirect to '/classes'
 end
+
+# EDIT
+
+get 'classes/:id/edit' do
+    @gym_class = GymClass.find_by_id(params['id'].to_i)
+    erb(:"gym_classes/edit")
+end

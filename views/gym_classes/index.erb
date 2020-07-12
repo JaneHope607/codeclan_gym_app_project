@@ -4,5 +4,6 @@
     <p>Instructor: <%= gym_class.instructor%></p>
     <p>Capacity: <%= gym_class.capacity%></p>
     <p>Remaining Spaces: <%= gym_class.get_remaining_spaces()%></p>
+    <p><a href="/classes/<%= gym_class.id%>">More Info</a></p>
     <hr/>
 <% end%>

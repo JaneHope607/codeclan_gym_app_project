@@ -1,0 +1,21 @@
+<form method="post" action="/classes/<%= @gym_class.id%>%">
+    <label for="class-name">Class Name:</label>
+        <input id="class-name" value=<%= @gym_class.name%> type="text" name="class_name"/>
+    
+    <label for="duration">Duration (mins):</label>
+        <select id="duration" name="duration" value=<%= @gym_class.duration%>>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+            <option value="60">60</option>
+        </select>
+
+    <label for="instructor">Instructor:</label>
+        <input id="instructor" value=<%= @gym_class.instructor%> type="text" name="instructor"/>
+
+    <label for="capacity">Capacity:</label>
+        <input id="capacity" value=<%= @gym_class.capacity%> type="number" name=""capacity/>
+    
+    <input type="submit" value="Create Class"/>
+
+</form>
