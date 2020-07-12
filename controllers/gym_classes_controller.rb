@@ -33,7 +33,15 @@ end
 
 # EDIT
 
-get 'classes/:id/edit' do
+get '/classes/:id/edit' do
     @gym_class = GymClass.find_by_id(params['id'].to_i)
     erb(:"gym_classes/edit")
+end
+
+# UPDATE
+
+post '/classes/:id' do
+    gym_class = GymClass.new(params)
+    gym_class.update()
+    redirect to '/classes'
 end
