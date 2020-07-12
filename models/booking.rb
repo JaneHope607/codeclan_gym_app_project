@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Booking
 
-    attr_reader :gymclass_id, :member_id, :id
+    attr_reader :id
+    attr_accessor :gymclass_id, :member_id
 
     def initialize(options)
         @id = options['id'].to_i if options ['id']
@@ -38,7 +39,7 @@ class Booking
     end
 
     # Method to update booking 
-    
+
     def update()
         sql = "UPDATE bookings
         SET (gymclass_id, member_id)

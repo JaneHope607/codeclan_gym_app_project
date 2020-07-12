@@ -2,7 +2,8 @@ require_relative( '../db/sql_runner' )
 
 class GymClass
 
-    attr_reader :name, :duration, :instructor, :capacity, :id
+    attr_reader :id 
+    attr_accessor :name, :duration, :instructor, :capacity
 
     def initialize(options)
         @id = options['id'].to_i if options['id']
@@ -46,7 +47,7 @@ class GymClass
         SET (name, duration, instructor, capacity)
         = ($1, $2, $3, $4)
         WHERE id = $5"
-        values = [@name, @duration, @instructor, @capacity]
+        values = [@name, @duration, @instructor, @capacity, @id]
         SqlRunner.run(sql, values)
     end
 

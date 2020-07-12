@@ -1,7 +1,6 @@
 require_relative("../models/member.rb")
 require_relative("../models/gymclass.rb")
 require_relative("../models/booking.rb")
-
 require("pry-byebug")
 
 member1 = Member.new({
@@ -115,6 +114,11 @@ booking4.save()
 booking5.save()
 booking6.save()
 
+member1.email = "Jane"
+member1.update()
+
+gymclass2.duration = '35'
+gymclass2.update()
 
 binding.pry
 nil
