@@ -24,12 +24,20 @@ class Booking
         @id = results['id'].to_i
     end
 
-    # Method to find all bookings
+    # Method to find all bookings and by id
 
     def self.find_all()
         sql = "SELECT * FROM bookings"
         results = SqlRunner.run(sql)
         return Booking.map_items(results)
+    end
+
+    def self.find_by_id(id)
+        sql = "SELECT * FROM bookings
+        WHERE id = $1"
+        values = [id]
+        results = SqlRunner.run(sql, values).first
+        return Booking.new(results)
     end
 
     # Mapping method

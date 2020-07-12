@@ -26,12 +26,20 @@ class Member
         @id = results['id'].to_i
     end
 
-    # Method to find all members
+    # Method to find all members and by id
 
     def self.find_all()
         sql = "SELECT * FROM members"
         results = SqlRunner.run(sql)
         return Member.map_items(results)
+    end
+
+    def self.find_by_id(id)
+        sql = "SELECT * FROM members
+        WHERE id = $1"
+        values = [id]
+        results = SqlRunner.run(sql, values).first
+        return GymClass.new(results)
     end
 
     # Mapping method
