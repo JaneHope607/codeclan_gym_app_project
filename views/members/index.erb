@@ -1,0 +1,7 @@
+<% @members.each do |member| %>
+    <p>Name: <%= member.full_name()%></p>
+    <p>Date Of Birth: <%= member.dob%></p>
+    <p>Contact Email: <%= member.email%></p>
+    <p><a href="/members/"<%= member.id%>>See more details</a></p>
+    <hr/>
+<% end %>
