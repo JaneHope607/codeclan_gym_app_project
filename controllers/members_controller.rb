@@ -3,7 +3,7 @@ require('sinatra/contrib/all')
 require_relative('../models/member.rb')
 also_reload('../models/*')
 
-# See all members
+# INDEX
 
 get '/members' do
     @members = Member.find_all()
@@ -16,7 +16,7 @@ get '/members/new' do
     erb(:"members/new")
 end
 
-# Show more details for member
+# SHOW
 
 get '/members/:id' do
     @member = Member.find_by_id(params['id'].to_i)
@@ -30,4 +30,13 @@ post '/members' do
     @member.save()
     erb(:"members/create")
 end
+
+# EDIT
+ 
+get '/members/:id/edit' do
+    @member = Member.find_by_id(params['id'].to_i)
+    erb(:"members/edit")
+end
+
+# UPDATE
 
