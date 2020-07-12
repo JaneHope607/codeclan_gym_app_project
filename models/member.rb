@@ -91,7 +91,7 @@ class Member
         return GymClass.map_items(results)
     end
 
-    # Deletes all booking for a member
+    # Deletes all bookings for a member
 
     def delete_bookings()
         sql = "DELETE FROM bookings

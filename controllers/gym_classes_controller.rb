@@ -45,3 +45,12 @@ post '/classes/:id' do
     gym_class.update()
     redirect to '/classes'
 end
+
+# DELETE
+
+post '/classes/:id/delete' do
+    gym_class = GymClass.find_by_id(params['id'].to_i)
+    gym_class.delete_members()
+    gym_class.delete()
+    redirect to '/classes'
+end

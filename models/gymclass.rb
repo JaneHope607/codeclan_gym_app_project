@@ -96,4 +96,13 @@ class GymClass
         @capacity -= 1
     end
 
+    # Deletes all members from a class (class gets deleted)
+
+    def delete_members()
+        sql = "DELETE FROM bookings
+        WHERE bookings.gymclass_id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
+
 end
