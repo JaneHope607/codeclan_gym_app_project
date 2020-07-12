@@ -16,7 +16,14 @@ class GymClass
     # Method to save gym classes
 
     def save()
-        sql = "INSERT INTO gym_classes"
+        sql = "INSERT INTO gym_classes
+        (name, duration, instructor, capacity, spaces_left)
+        VALUES
+        ($1, $2, $3, $4, $5)
+        RETURNING id"
+        values = [@name, @duration, @instructor, @capacity, @spaces_left]
+        results = SqlRunner.run(sql, values).first
+        @id = results['id'].to_i
     end
 
 end

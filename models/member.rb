@@ -23,7 +23,6 @@ class Member
         values = [@first_name, @last_name, @dob, @email]
         results = SqlRunner.run(sql, values).first
         @id = results['id'].to_i
-        end
     end
 
 
