@@ -4,14 +4,20 @@
     <table>
         <tr>
             <th>Class Name</th>
+            <th></th>
             <th>Instructor</th>
-            <th>Duration</th>
+            <th></th>
+            <th>Duration (mins)</th>
         </tr>
         <% @member.booked_gym_classes.each do |gym_class|%>
         <tr>
             <td><%= gym_class.name%></td>
+            <td></td>
             <td><%= gym_class.instructor%></td>
+            <td></td>
             <td><%= gym_class.duration%></td>
+            <td></td>
+            <td><%=  %>Remove</td>
         </tr>
         <% end %>
     </table>

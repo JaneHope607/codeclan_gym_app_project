@@ -91,12 +91,26 @@ class Member
         return GymClass.map_items(results)
     end
 
+    # Deletes all booking for a member
+
     def delete_bookings()
         sql = "DELETE FROM bookings
         WHERE bookings.member_id = $1"
         values = [@id]
         SqlRunner.run(sql, values)
     end
+
+    #deletes specific booking for a member
+
+    # def self.delete_booking()
+    #     sql = "DELETE FROM gym_classes
+    #     INNER JOIN bookings
+    #     ON bookings.gymclass_id
+    #     = gym_classes.id
+    #     WHERE bookings.member_id = $1"
+    #     values = [@id]
+    #     SqlRunner.run(sql, values)
+    # end
 
 end
 
