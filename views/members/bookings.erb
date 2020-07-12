@@ -1,0 +1,17 @@
+<h1>Member Name: <%= @member.full_name()%></h1>
+<h2>Upcoming Classes:</h2>
+
+    <table>
+        <tr>
+            <th>Class Name</th>
+            <th>Instructor</th>
+            <th>Duration</th>
+        </tr>
+        <% @member.booked_gym_classes.each do |gym_class|%>
+        <tr>
+            <td><%= gym_class.name%></td>
+            <td><%= gym_class.instructor%></td>
+            </td><%= gym_class.instructor%></td>
+        </tr>
+        <% end %>
+    </table>

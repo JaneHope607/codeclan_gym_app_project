@@ -54,3 +54,10 @@ post '/members/:id/delete' do
     member.delete()
     redirect to '/members'
 end
+
+# SHOW ALL BOOKINGS FOR MEMBER
+
+get '/members/:id/bookings' do
+    @member = Member.find_by_id(params['id'].to_i)
+    erb(:"members/bookings")
+end
