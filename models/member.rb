@@ -12,6 +12,8 @@ class Member
         @email = options['email']
     end
 
+    def save
+
 
 end
 
