@@ -75,18 +75,21 @@ class Booking
 
     def member()
         sql = "SELECT * FROM
-        members WHERE id = $1"
+        members WHERE members.id = $1"
         values = [@member_id]
         results = SqlRunner.run(sql, values).first
         return Member.new(results)
     end
 
     def gym_class()
-        sql = "SELECT * FROM
-        gym_classes WHERE id = $1"
-        values = [@gymclass_id]
-        results = SqlRunner.run(sql, values).first
-        return GymClass.new(results)
+        sql = "SELECT gym_classes.*
+        FROM gym_classes
+        INNER JOIN gym_sessions
+        ON gym_classes.id = gym_sessions.gymclass_id
+        WHERE gym_sessions.id = $1"
+        values = [@session_id]
+        results = SqlRunner.run(sql, values)
+        return GymClass.map_items(results)
     end
 
 end

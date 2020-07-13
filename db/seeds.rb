@@ -187,8 +187,13 @@ booking6.save()
 # member1.first_name = "Jane"
 # member1.update()
 
+# session1.capacity = "25"
+# session1.update()
+
 # gymclass2.duration = '35'
 # gymclass2.update()
+
+# session1.delete()
 
 binding.pry
 nil

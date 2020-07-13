@@ -31,7 +31,7 @@ class Session
     def self.find_all()
         sql = "SELECT * FROM gym_sessions"
         results = SqlRunner.run(sql)
-        return GymClass.map_items(results)
+        return Session.map_items(results)
     end
 
     def self.find_by_id(id)
@@ -39,7 +39,7 @@ class Session
         WHERE id = $1"
         values = [id]
         results = SqlRunner.run(sql, values).first
-        return GymClass.new(results)
+        return Session.new(results)
     end
 
     # Mapping method
@@ -72,6 +72,8 @@ class Session
         values = [@id]
         SqlRunner.run(sql, values)
     end
+
+    # Method to 
 
     def gym_class
         sql = "SELECT * FROM gym_classes
