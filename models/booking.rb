@@ -71,7 +71,7 @@ class Booking
         SqlRunner.run(sql, values)
     end
 
-    # Method to get member and gym class for booking
+    # Method to get member for booking
 
     def member()
         sql = "SELECT * FROM members
@@ -80,6 +80,8 @@ class Booking
         results = SqlRunner.run(sql, values)
         return Member.map_items(results)
     end
+
+    # Method to get gym class for booking
 
     def gym_class()
         sql = "SELECT gym_classes.*
@@ -91,6 +93,8 @@ class Booking
         results = SqlRunner.run(sql, values)
         return GymClass.map_items(results)
     end
+
+    # Method to get session for booking
 
     def session()
         sql = "SELECT * FROM

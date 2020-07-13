@@ -79,19 +79,44 @@ class GymClass
         FROM members
         INNER JOIN bookings
         ON bookings.member_id = members.id
-        WHERE bookings.gymclass_id = $1;"
+        INNER JOIN gym_sessions
+        ON bookings.session_id = gym_sessions.id
+        WHERE gym_sessions.gymclass_id = $1;"
         values = [@id]
         results = SqlRunner.run(sql, values)
         return Member.map_items(results)
     end
 
+    # Method to find all bookings for this class
+
+    def bookings()
+        sql = "SELECT bookings.*
+        FROM bookings
+        INNER JOIN gym_sessions
+        ON bookings.session_id = gym_sessions.id
+        WHERE gym_sessions.gymclass_id = $1"
+        values = [@id]
+        results = SqlRunner.run(sql, values)
+        return Booking.map_items(results)
+    end
+
+    # Method to find all sessions for this class
+
+    def sessions()
+        sql = "SELECT * FROM gym_sessions
+        WHERE gymclass_id =$1"
+        values = [@id]
+        results = SqlRunner.run(sql, values)
+        return Screening.map_items(results)
+    end
+
     # Deletes all members from a class (class gets deleted)
 
-    def delete_members()
-        sql = "DELETE FROM bookings
-        WHERE bookings.gymclass_id = $1"
-        values = [@id]
-        SqlRunner.run(sql, values)
-    end
+    # def delete_members()
+    #     sql = "DELETE FROM bookings
+    #     WHERE bookings.gymclass_id = $1"
+    #     values = [@id]
+    #     SqlRunner.run(sql, values)
+    # end
 
 end
