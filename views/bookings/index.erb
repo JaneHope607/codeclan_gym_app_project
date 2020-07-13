@@ -21,7 +21,9 @@
             <td></td>
             <td><%= booking.member.full_name()%></td>
             <td></td>
-            <td>Update Booking</td>
+            <td><form method="post" action="/bookings/<%= booking.id%>/delete">
+                    <input type="submit" value="Delete Booking"/>
+                </form>
         <% end %>
 
 
