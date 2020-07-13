@@ -12,18 +12,16 @@
     </label>
 
     <label>
-    Select Available Class:
-        <select name="gymclass_id">
-            <% for gym_class in @gym_classes%>
-            <% if gym_class.members.count() < gym_class.capacity%>
-                <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
+    Select Available Session:
+        <select name="session_id">
+            <% for session in @sessions%>
+            <% if session.members.count() < session.capacity%>
+                <option value="<%= session.id%>"><%= session.day%> @ <%= session.start_time%></option>
             <% end %>
             <% end %>
         </select>
     </label>
 
     <input type="submit" value="Create Booking"/>
-
-    <%= print "Added member to class!"%>
 
 </form>
