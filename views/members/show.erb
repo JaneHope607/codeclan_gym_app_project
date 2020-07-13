@@ -1,0 +1,17 @@
+<% for member in @members%>
+    <p>Name: <%= member.full_name()%></p>
+    <p>Date Of Birth: <%= member.dob%></p>
+    <p>Contact Email: <%= member.email%></p>
+    <p><a href="/members/<%= member.id%>">Full profile</a></p>
+    <p><a href="/members/<%= member.id%>/bookings">Classes Booked</a></p>
+
+    <form method="get" action="/members/<%=member.id%>/edit">
+        <input type="submit" value="Update Member"/>
+    </form>
+
+    <form method="post" action="/members/<%=member.id%>/delete">
+        <input type="submit" value="Deactivate Member"/>
+    </form>
+    <hr/>
+
+<% end%>
