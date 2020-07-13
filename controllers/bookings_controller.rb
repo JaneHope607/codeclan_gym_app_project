@@ -19,6 +19,7 @@ get '/bookings/new' do
     @bookings = Booking.find_all()
     @sessions = Session.find_all()
     @classes = GymClass.find_all()
+    @members = Member.find_all()
     erb(:"bookings/new")
 end
 
@@ -38,6 +39,9 @@ post '/bookings/:id/delete' do
     redirect to "/bookings"
 end
 
+# SEE AVAILABLE SESSIONS
 
-
-
+get 'bookings/new/sessions/:id' do
+    selected_class = Class.find_by_id(params[:id])
+    erb(:"bookings/sesssions")
+end

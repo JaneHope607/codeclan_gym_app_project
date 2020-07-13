@@ -1,12 +1,14 @@
 <h1>New Booking</h1>
 
-<form method="post" action="/bookings">
+<% for gym_class in @classes%>
+<form method="get" action="/bookings/new/sessions/<%= gym_class.id %>">
+<% end %>
 
     <label>
     Select A Member:
         <select name="member_id">
-            <% for booking in @bookings%>
-                <option value="<%= booking.member_id%>"><%= booking.member.full_name()%></option>
+            <% for member in @members%>
+                <option value="<%= member.id%>"><%= member.full_name()%></option>
             <% end %>
         </select>
     </label>
@@ -20,6 +22,17 @@
          </select>
     </label>
 
-    <input type="submit" value="Available Sessions"/>
+    <label>
+    Select Session:
+        <select>
+            <% for session in @sessions%>
+        
+            <% end %>
+
+        </select>
+    </label>
+
+
+    <input type="submit" value="All Available Sessions"/>
 
 </form>
