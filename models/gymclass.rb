@@ -107,7 +107,7 @@ class GymClass
         WHERE gymclass_id =$1"
         values = [@id]
         results = SqlRunner.run(sql, values)
-        return Screening.map_items(results)
+        return Session.map_items(results)
     end
 
     # Deletes all members from a class (class gets deleted)

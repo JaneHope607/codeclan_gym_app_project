@@ -73,7 +73,7 @@ class Session
         SqlRunner.run(sql, values)
     end
 
-    # Method to 
+    # Method to return gym class details for session
 
     def gym_class
         sql = "SELECT * FROM gym_classes
@@ -84,12 +84,14 @@ class Session
         return gym_class
     end
 
+    # Method to return all members for session
+
     def members()
         sql = "SELECT members.*
         FROM members
         INNER JOIN bookings
-        ON bookings.member_id = members.id
-        WHERE bookings.gymclass_id = $1;"
+        ON members.id = bookings.member_id
+        WHERE bookings.session_id = $1;"
         values = [@id]
         results = SqlRunner.run(sql, values)
         return Member.map_items(results)

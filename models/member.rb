@@ -80,21 +80,20 @@ class Member
         return "#{@first_name.capitalize} #{@last_name.capitalize}"
     end
 
-    # Method to find all gym classes a member is signed up for
+    # Method to find all sessions a member is signed up for
 
-    def booked_gym_classes()
-        sql = "SELECT gym_classes.*
-        FROM gym_classes
+    def booked_sessions()
+        sql = "SELECT gym_sessions.*
+        FROM gym_sessions
         INNER JOIN bookings
-        ON bookings.gymclass_id
-        = gym_classes.id
+        ON gym_sessions.id = bookings.session_id
         WHERE bookings.member_id = $1;"
         values = [@id]
         results = SqlRunner.run(sql, values)
-        return GymClass.map_items(results)
+        return Session.map_items(results)
     end
 
-    # Deletes all bookings for a member
+    # Deletes bookings for a member (if member gets deleted)
 
     def delete_bookings()
         sql = "DELETE FROM bookings
@@ -102,19 +101,7 @@ class Member
         values = [@id]
         SqlRunner.run(sql, values)
     end
-
-    #deletes specific booking for a member
-
-    # def self.delete_booking()
-    #     sql = "DELETE FROM gym_classes
-    #     INNER JOIN bookings
-    #     ON bookings.gymclass_id
-    #     = gym_classes.id
-    #     WHERE bookings.member_id = $1"
-    #     values = [@id]
-    #     SqlRunner.run(sql, values)
-    # end
-
+    
 end
 
 
