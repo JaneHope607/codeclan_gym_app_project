@@ -31,11 +31,3 @@ post '/bookings' do
 end
 
 
-# DELETE
-
-post '/bookings/:id/delete' do
-    booking = Booking.find_by_id(params['id'].to_i)
-    booking.delete()
-    redirect to "/bookings"
-end
-

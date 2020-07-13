@@ -104,4 +104,10 @@ class Booking
         return Session.new(result)
     end
 
+    def delete_member
+        sql = "DELETE FROM bookings
+        WHERE members.id = $1"
+        values = [@member_id]
+        SqlRunner.run(sql, values]
+    end
 end

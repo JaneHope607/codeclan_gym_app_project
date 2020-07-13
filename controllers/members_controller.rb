@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/member.rb')
+require_relative('../models/booking.rb')
 also_reload('../models/*')
 
 # INDEX
@@ -62,10 +63,3 @@ get '/members/:id/bookings' do
     erb(:"members/bookings")
 end
 
-# DELETE booking for a member
-
-post '/members/:id/bookings/delete' do
-    booking = Booking.find_by_id(params['id'].to_i)
-    booking.delete()
-    redirect to "/bookings"
-end
