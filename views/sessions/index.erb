@@ -3,6 +3,8 @@
 <% for session in @sessions%>
     <p>Class Name: <%= session.gym_class.name%></p>
     <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>
+    <p>Day: <%= session.day%></p>
+    <p>Start Time: <%= session.start_time%></p>
+    <p>Duration: <%= session.gym_class.duration%> mins</p>
     <hr/>
 <% end %>

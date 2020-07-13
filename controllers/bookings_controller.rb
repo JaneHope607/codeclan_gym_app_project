@@ -22,10 +22,6 @@ get '/bookings/new' do
     erb(:"bookings/new")
 end
 
-# GET AVAILABLE SESSIONS
-
-    erb(:"bookin")
-
 # CREATE
 
 post '/bookings' do

@@ -1,0 +1,32 @@
+<form method="post" action="/sessions">
+    
+    <label>
+    Select Class:
+        <select name="gymclass_id">
+            <% for gym_class in @classes%>
+                <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
+            <% end %>
+         </select>
+    </label>
+    
+    <label for="day">Day:</label>
+        <select id="duration" name="duration">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+
+        </select>
+
+    <label for="start-time">Start Time:</label>
+        <input id="start-time" type="time" name="start_time" min="09:00" max="18:00"/>
+
+    <label for="capacity">Cacpacity:</label>
+        <input id="capacity" type="number" name="capacity" min="0" max="50"/>
+    
+    <input type="submit" value="New Sessions"/>
+
+</form>

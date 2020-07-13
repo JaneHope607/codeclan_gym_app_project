@@ -16,6 +16,8 @@ end
 # NEW
 
 get '/sessions/new' do
+    @sessions = Session.find_all()
+    @classes = GymClass.find_all()
     erb(:"sessions/new")
 end
 
