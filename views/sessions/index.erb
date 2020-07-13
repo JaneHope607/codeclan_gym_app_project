@@ -7,5 +7,10 @@
     <p>Start Time: <%= session.start_time%></p>
     <p>Duration: <%= session.gym_class.duration%> mins</p>
     <p>Spaces Left: <%= session.remaining_spaces()%></p>
+
+    <td><form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input type="submit" value="Delete Booking"/>
+        </form></td>
+
     <hr/>
 <% end %>

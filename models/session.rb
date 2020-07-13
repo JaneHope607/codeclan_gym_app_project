@@ -29,7 +29,8 @@ class Session
     # Method to find all sessions by id
 
     def self.find_all()
-        sql = "SELECT * FROM gym_sessions"
+        sql = "SELECT * FROM gym_sessions
+        ORDER BY day"
         results = SqlRunner.run(sql)
         return Session.map_items(results)
     end

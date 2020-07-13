@@ -55,7 +55,6 @@ end
 
 post '/sessions/:id/delete' do
     session = Session.find_by_id(params['id'].to_i)
-    session.delete_bookings()
     session.delete()
     redirect to "/sessions"
 end
