@@ -10,7 +10,6 @@ class GymClass
         @name = options['name']
         @duration = options['duration'].to_i
         @instructor = options['instructor']
-        @capacity = options['capacity'].to_i
     end
 
     # Method to save gym classes
@@ -19,9 +18,9 @@ class GymClass
         sql = "INSERT INTO gym_classes
         (name, duration, instructor, capacity)
         VALUES
-        ($1, $2, $3, $4)
+        ($1, $2, $3)
         RETURNING id"
-        values = [@name, @duration, @instructor, @capacity]
+        values = [@name, @duration, @instructor]
         results = SqlRunner.run(sql, values).first
         @id = results['id'].to_i
     end
@@ -52,10 +51,10 @@ class GymClass
 
     def update()
         sql = "UPDATE gym_classes
-        SET (name, duration, instructor, capacity)
-        = ($1, $2, $3, $4)
-        WHERE id = $5"
-        values = [@name, @duration, @instructor, @capacity, @id]
+        SET (name, duration, instructor)
+        = ($1, $2, $3)
+        WHERE id = $4"
+        values = [@name, @duration, @instructor, @id]
         SqlRunner.run(sql, values)
     end
 
@@ -84,20 +83,6 @@ class GymClass
         values = [@id]
         results = SqlRunner.run(sql, values)
         return Member.map_items(results)
-    end
-
-    # Methods to return remaining spaces and reduce/increase capacity 
-
-    def remaining_spaces()
-        @capacity -= members.count()
-    end
-
-    def reduce_capacity()
-        @capacity -= 1
-    end
-
-    def increase_capacity()
-        @capacity += 1
     end
 
     # Deletes all members from a class (class gets deleted)

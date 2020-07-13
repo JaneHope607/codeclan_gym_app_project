@@ -55,36 +55,31 @@ member4.save()
 gymclass1 = GymClass.new({
     "name" => "Yoga",
     "duration" => "60",
-    "instructor" => "Adam Parker",
-    "capacity" => "15"
+    "instructor" => "Adam Parker"
 })
 
 gymclass2 = GymClass.new({
     "name" => "Kettlebells",
     "duration" => "30",
-    "instructor" => "Ruth Longstone",
-    "capacity" => "25"
+    "instructor" => "Ruth Longstone"
 })
 
 gymclass3 = GymClass.new({
     "name" => "Spin",
     "duration" => "30",
-    "instructor" => "Emily Whitehall",
-    "capacity" => "20"
+    "instructor" => "Emily Whitehall"
 })
 
 gymclass4 = GymClass.new({
     "name" => "Pilates",
     "duration" => "45",
-    "instructor" => "Aaron Marsh",
-    "capacity" => "10"
+    "instructor" => "Aaron Marsh"
 })
 
 gymclass5 = GymClass.new({
     "name" => "Absolute Abs",
     "duration" => "45",
-    "instructor" => "Mark Stone",
-    "capacity" => "15"
+    "instructor" => "Mark Stone"
 })
 
 gymclass1.save()
@@ -92,6 +87,8 @@ gymclass2.save()
 gymclass3.save()
 gymclass4.save()
 gymclass5.save()
+
+
 
 booking1 = Booking.new({
     "gymclass_id" => gymclass3.id,
