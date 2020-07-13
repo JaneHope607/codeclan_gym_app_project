@@ -20,6 +20,7 @@ end
 
 get '/classes/:id' do
     @gym_class = GymClass.find_by_id(params['id'].to_i)
+    @sessions = Session.find_by_id(params['id'].to_i)
     erb(:"gym_classes/show")
 end
 

@@ -13,7 +13,6 @@ end
 # NEW
 
 get '/members/new' do
-    
     erb(:"members/new")
 end
 

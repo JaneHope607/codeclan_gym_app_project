@@ -5,19 +5,17 @@
     <label>
     Select A Member:
         <select name="member_id">
-            <% for member in @members%>
-                <option value="<%= member.id%>"><%= member.full_name%></option>
+            <% for booking in @bookings%>
+                <option value="<%= booking.member_id%>"><%= booking.member.full_name()%></option>
             <% end %>
         </select>
     </label>
 
     <label>
     Select Class:
-        <select name="sessions.gymclass_id">
-            <% for session in @sessions%>
-            <% if session.members.count() < session.capacity%>
-                <option value="<%= session.gym_class.id%>"><%= session.gym_class.name%></option>
-            <% end %>
+        <select name="gymclass_id">
+            <% for gym_class in @classes%>
+                <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
             <% end %>
          </select>
     </label>
