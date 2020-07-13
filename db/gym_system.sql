@@ -8,7 +8,7 @@ CREATE TABLE members (
     last_name VARCHAR (255),
     dob VARCHAR(255),
     email VARCHAR(255),
-    number INT,
+    number VARCHAR(15),
     date_joined VARCHAR(255),
     membership_type VARCHAR(255)
 );

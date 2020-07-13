@@ -2,7 +2,7 @@
 
 <% for member in @members%>
     <p>Name: <%= member.full_name()%></p>
-    <p>Date Of Birth: <%= member.dob%></p>
+    <p>Membership Type: <%= member.membership_type%></p>
     <p>Contact Email: <%= member.email%></p>
     <p><a href="/members/<%= member.id%>">Full profile</a></p>
     <p><a href="/members/<%= member.id%>/bookings">Classes Booked</a></p>
