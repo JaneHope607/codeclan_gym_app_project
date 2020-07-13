@@ -79,9 +79,8 @@ class Session
         sql = "SELECT * FROM gym_classes
         WHERE gym_classes.id = $1"
         values = [@gymclass_id]
-        result = SqlRunner.run(sql, values)
-        gym_class = GymClass.map_items(result)
-        return gym_class
+        result = SqlRunner.run(sql, values).first
+        return GymClass.new(result)
     end
 
     # Method to return all members for session

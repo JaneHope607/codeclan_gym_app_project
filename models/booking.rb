@@ -77,8 +77,8 @@ class Booking
         sql = "SELECT * FROM members
         WHERE members.id = $1"
         values = [@member_id]
-        results = SqlRunner.run(sql, values)
-        return Member.map_items(results)
+        result = SqlRunner.run(sql, values).first
+        return Member.new(result)
     end
 
     # Method to get gym class for booking

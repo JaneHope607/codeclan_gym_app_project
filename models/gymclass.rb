@@ -114,6 +114,8 @@ class GymClass
 
     # def delete_members()
     #     sql = "DELETE FROM bookings
+    #     INER JOIN gym_sessions
+    #     ON booking.s
     #     WHERE bookings.gymclass_id = $1"
     #     values = [@id]
     #     SqlRunner.run(sql, values)
