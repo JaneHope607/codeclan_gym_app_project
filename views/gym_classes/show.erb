@@ -1,6 +1,20 @@
-    <p>Class Name: <%= @gym_class.name%></p>
-    <p>Duration: <%= @gym_class.duration%></p>
-    <p>Instructor: <%= @gym_class.instructor%></p>
-    <p>Capacity: <%= @gym_class.capacity%></p>
-    <p>Remaining Spaces: <%= @gym_class.get_remaining_spaces()%></p>
-    <hr/>
+<h1>Class Name: <%= @gym_class.name%></h1>
+<h2>Members Booked On Class:</h2>
+
+    <table>
+        <tr>
+            <th>Member Name</th>
+            <th></th>
+            <th>Member ID</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <% @gym_class.members.each do |member| %>
+        <tr>
+            <td><%= member.id%></td>
+            <td></td>
+            <td><%= member.full_name()%></td>
+            <td></td>
+            <td>See profile<a href="/members/full_name()%></td>
+            <td></td>
+<% end %>
