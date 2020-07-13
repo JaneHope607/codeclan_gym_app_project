@@ -12,13 +12,13 @@
     </label>
 
     <label>
-    Select A Class:
+    Select Available Class:
         <select name="gymclass_id">
             <% for gym_class in @gym_classes%>
-            <% if gym_class.members.count() < gym_class.capacity %>
+            <% if gym_class.members.count() < gym_class.capacity%>
                 <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
             <% else %>
-                <%= "this class is full!" %>
+                <%# <%= "this class is full!"%>
             <% end %>
             <% end %>
         </select>

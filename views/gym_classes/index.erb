@@ -3,7 +3,7 @@
     <p>Duration: <%= gym_class.duration%></p>
     <p>Instructor: <%= gym_class.instructor%></p>
     <p>Capacity: <%= gym_class.capacity%></p>
-    <p>Remaining Spaces: <%= gym_class.get_remaining_spaces()%></p>
+    <p>Remaining Spaces: <%= gym_class.remaining_spaces()%></p>
     <p><a href="/classes/<%= gym_class.id%>">Show All Members Booked</a></p>
 
     <form method="get" action="/classes/<%= gym_class.id%>/edit">
