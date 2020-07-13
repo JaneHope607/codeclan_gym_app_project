@@ -103,5 +103,3 @@ class Member
     end
     
 end
-
-

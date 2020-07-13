@@ -55,3 +55,10 @@ post '/classes/:id/delete' do
     gym_class.delete()
     redirect to "/classes"
 end
+
+# SHOW ALL SESSIONS FOR CLASS
+
+get '/classes/:id/sessions' do
+    @gym_class = GymClass.find_by_id(params['id'].to_i)
+    erb(:"gym_classes/sessions")
+end

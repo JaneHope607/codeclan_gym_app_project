@@ -4,7 +4,7 @@
     <p>Class Name: <%= gym_class.name%></p>
     <p>Duration: <%= gym_class.duration%></p>
     <p>Instructor: <%= gym_class.instructor%></p>
-    <p><a href="/classes/<%= gym_class.id%>">Show All Members Booked</a></p>
+    <p><a href="/classes/<%= gym_class.id%>/sessions">Show All Sessions</a></p>
 
     <form method="get" action="/classes/<%= gym_class.id%>/edit">
         <input type="submit" value="Update Class"/>
