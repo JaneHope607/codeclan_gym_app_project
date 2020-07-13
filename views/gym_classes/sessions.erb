@@ -13,7 +13,8 @@
         <tr>
             <td><%= gym_class.day%></td>
             <td><%= gym_class.start_time%></td>
-            <td><%= gym_class%></td>
+            <td><%= gym_class.gym_class.duration()%></td>
+            <td><%= gym_class.remaining_spaces()%></td>
         </tr>
         <% end %>
     </table>
