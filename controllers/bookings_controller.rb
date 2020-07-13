@@ -10,7 +10,6 @@ also_reload('../models/*')
 
 get '/bookings' do
     @bookings = Booking.find_all()
-    @sessions = Session.find_all()
     erb(:"bookings/index")
 end
 
@@ -22,6 +21,10 @@ get '/bookings/new' do
     @classes = GymClass.find_all()
     erb(:"bookings/new")
 end
+
+# GET AVAILABLE SESSIONS
+
+    erb(:"bookin")
 
 # CREATE
 

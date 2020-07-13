@@ -20,17 +20,6 @@
          </select>
     </label>
 
-    <label>
-    Select Available Session:
-        <select name="session_id">
-             <% for session in @sessions%>
-              <% if session.members.count() < session.capacity%>
-                <option value="<%= session.id%>"><%= session.day%> @ <%= session.start_time%></option>
-            <% end %>
-            <% end %>
-        </select>
-    </label>
-
-    <input type="submit" value="Create Booking"/>
+    <input type="submit" value="Available Sessions"/>
 
 </form>

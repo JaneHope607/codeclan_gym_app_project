@@ -97,11 +97,11 @@ class Booking
     # Method to get session for booking
 
     def session()
-        sql = "SELECT * FROM
-        gym_sessions WHERE gym_sessions.id = $1"
+        sql = "SELECT * FROM gym_sessions
+        WHERE gym_sessions.id = $1"
         values = [@session_id]
-        results = SqlRunner.run(sql, values)
-        return Session.map_items(results)
+        result = SqlRunner.run(sql, values).first
+        return Session.new(result)
     end
 
 end
