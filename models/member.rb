@@ -58,7 +58,7 @@ class Member
         SET (first_name, last_name, dob, email, number, date_joined, membership_type)
         = ($1, $2, $3, $4, $5, $6, $7)
         WHERE id = $8"
-        values = [@first_name, @last_name, @dob, @email, @number, @date_joined, @membership_type]
+        values = [@first_name, @last_name, @dob, @email, @number, @date_joined, @membership_type, @id]
         SqlRunner.run(sql, values)
     end
 
