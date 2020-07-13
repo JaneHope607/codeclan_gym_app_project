@@ -74,11 +74,11 @@ class Booking
     # Method to get member and gym class for booking
 
     def member()
-        sql = "SELECT * FROM
-        members WHERE members.id = $1"
+        sql = "SELECT * FROM members
+        WHERE members.id = $1"
         values = [@member_id]
-        results = SqlRunner.run(sql, values).first
-        return Member.new(results)
+        results = SqlRunner.run(sql, values)
+        return Member.map_items(results)
     end
 
     def gym_class()
@@ -90,6 +90,14 @@ class Booking
         values = [@session_id]
         results = SqlRunner.run(sql, values)
         return GymClass.map_items(results)
+    end
+
+    def session()
+        sql = "SELECT * FROM
+        gym_sessions WHERE gym_sessions.id = $1"
+        values = [@session_id]
+        results = SqlRunner.run(sql, values)
+        return Session.map_items(results)
     end
 
 end
