@@ -12,15 +12,15 @@
         <input id="email" value=<%= @member.email%> type="text" name="email"/>
 
     <label for="phone-number">Phone Number:</label>
-        <input id="phone-number" value=<%= @member.number%> type="text" name="number">
+        <input id="phone-number" value=<%= @member.number%> type="text" name="number"/>
 
     <label for="date-joined">Date Joined:</label>
-         <input id="date-joined" value=<%= @member.date_joined%> type="date" name="date_joined">
+         <input id="date-joined" value=<%= @member.date_joined%> type="date" name="date_joined"/>
 
     <label for="membership_select">Memerbship Type:</label>
-        <select name="membership_type" id="membership_select" value=<%= @member.membership_type%>>
-            <option value="Premium">Premium</option>
-            <option value="Standard">Standard</option>
+        <select name="membership_type" id="membership_select">
+            <option value="Premium" <%= "selected" if @member.membership_type == "Premium"%>>Premium</option>
+            <option value="Standard" <%= "selected" if @member.membership_type == "Standard"%>>Standard</option>
         </select>
 
     <input type="submit" value="Update Member"/>

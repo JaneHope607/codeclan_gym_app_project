@@ -4,10 +4,10 @@
     
     <label for="duration">Duration (mins):</label>
         <select id="duration" name="duration" value=<%= @gym_class.duration%>>
-            <option value="15">15</option>
-            <option value="30">30</option>
-            <option value="45">45</option>
-            <option value="60">60</option>
+            <option value="15" <%= "selected" if @gym_class.duration == 15%>>15</option>
+            <option value="30" <%= "selected" if @gym_class.duration == 30%>>30</option>
+            <option value="45" <%= "selected" if @gym_class.duration == 45%>>45</option>
+            <option value="60" <%= "selected" if @gym_class.duration == 60%>>60</option>
         </select>
 
     <label for="instructor">Instructor:</label>

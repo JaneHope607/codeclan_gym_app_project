@@ -108,6 +108,6 @@ class Booking
         sql = "DELETE FROM bookings
         WHERE members.id = $1"
         values = [@member_id]
-        SqlRunner.run(sql, values]
+        SqlRunner.run(sql, values)
     end
 end
