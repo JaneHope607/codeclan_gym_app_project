@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class GymClass
 
     attr_reader :id 
-    attr_accessor :name, :duration, :instructor, :capacity
+    attr_accessor :name, :duration, :instructor
 
     def initialize(options)
         @id = options['id'].to_i if options['id']
@@ -16,7 +16,7 @@ class GymClass
 
     def save()
         sql = "INSERT INTO gym_classes
-        (name, duration, instructor, capacity)
+        (name, duration, instructor)
         VALUES
         ($1, $2, $3)
         RETURNING id"

@@ -73,12 +73,24 @@ class Session
         SqlRunner.run(sql, values)
     end
 
-    def member()
-        sql = "SELECT * FROM
-        members WHERE id = $1"
-        values = [@member_id]
-        results = SqlRunner.run(sql, values).first
-        return Member.new(results)
+    def gym_class
+        sql = "SELECT * FROM gym_classes
+        WHERE gym_classes.id = $1"
+        values = [@gymclass_id]
+        result = SqlRunner.run(sql, values)
+        gym_class = GymClass.map_items(result)
+        return gym_class
+    end
+
+    def members()
+        sql = "SELECT members.*
+        FROM members
+        INNER JOIN bookings
+        ON bookings.member_id = members.id
+        WHERE bookings.gymclass_id = $1;"
+        values = [@id]
+        results = SqlRunner.run(sql, values)
+        return Member.map_items(results)
     end
 
     # Methods to return remaining spaces and reduce/increase capacity 

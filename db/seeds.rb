@@ -1,9 +1,11 @@
 require_relative("../models/member.rb")
 require_relative("../models/gymclass.rb")
+require_relative("../models/session.rb")
 require_relative("../models/booking.rb")
 require("pry-byebug")
 
 Booking.delete_all()
+Session.delete_all()
 Member.delete_all()
 GymClass.delete_all()
 
@@ -88,35 +90,90 @@ gymclass3.save()
 gymclass4.save()
 gymclass5.save()
 
+session1 = Session.new({
+    "gymclass_id" => gymclass3.id,
+    "day" => "Wednesday",
+    "start_time" => "12:30",
+    "capacity" => "15"
+})
 
+session2 = Session.new({
+    "gymclass_id" => gymclass4.id,
+    "day" => "Thurday",
+    "start_time" => "14:00",
+    "capacity" => "20"
+})
+
+session3 = Session.new({
+    "gymclass_id" => gymclass4.id,
+    "day" => "Friday",
+    "start_time" => "12:30",
+    "capacity" => "20"
+})
+
+session4 = Session.new({
+    "gymclass_id" => gymclass1.id,
+    "day" => "Wednesday",
+    "start_time" => "11:00",
+    "capacity" => "10"
+})
+
+session5 = Session.new({
+    "gymclass_id" => gymclass2.id,
+    "day" => "Sunday",
+    "start_time" => "14:30",
+    "capacity" => "10"
+})
+
+session6 = Session.new({
+    "gymclass_id" => gymclass3.id,
+    "day" => "Tuesday",
+    "start_time" => "12:30",
+    "capacity" => "20"
+})
+
+session7 = Session.new({
+    "gymclass_id" => gymclass3.id,
+    "day" => "Friday",
+    "start_time" => "15:45",
+    "capacity" => "15"
+})
+
+session1.save()
+session2.save()
+session3.save()
+session4.save()
+session5.save()
+session6.save()
+session7.save()
 
 booking1 = Booking.new({
-    "gymclass_id" => gymclass3.id,
+    "session_id" => session1.id,
     "member_id" => member1.id
 })
 
 booking2 = Booking.new({
-    "gymclass_id" => gymclass5.id,
+    "session_id" => session4.id,
     "member_id" => member4.id
 })
 
 booking3 = Booking.new({
-    "gymclass_id" => gymclass1.id,
+    "session_id" => session5.id,
     "member_id" => member2.id
 })
 
 booking4 = Booking.new({
-    "gymclass_id" => gymclass2.id,
+    "session_id" => session2.id,
     "member_id" => member3.id
 })
 
 booking5 = Booking.new({
-    "gymclass_id" => gymclass5.id,
+    "session_id" => session3.id,
     "member_id" => member2.id
 })
 
 booking6 = Booking.new({
-    "gymclass_id" => gymclass4.id,
+    "session_id" => session4.id,
     "member_id" => member1.id
 })
 
