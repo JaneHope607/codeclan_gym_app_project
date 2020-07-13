@@ -14,3 +14,9 @@ end
 
 # NEW
 
+get '/bookings/new' do
+    @members = Member.find_all()
+    @gym_classes = GymClass.find_all()
+    erb(:"bookings/new")
+end
+

@@ -1,0 +1,26 @@
+<form method="post" action="/classes">
+    <label>
+    Select A Member:
+        <select name="member_id">
+            <% for member in @members%>
+            <option value="<%= member.id%>"><%= member.full_name%></option>
+            <% end %>
+        </select>
+    </label>
+
+    <label>
+    Select A Class:
+        <select name="gymclass_id">
+            <% for gym_class in @gym_classes%>
+            <% if gym_class.capacity > 0%>
+                <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
+            <% else %>
+                <p>I'm sorry, <%= gym_class.name%> is fully booked!</p>
+            <% end %>
+            <% end %>
+        </select>
+    </label>
+
+    <input type="submit" value="Create Booking"/>
+
+</form>
