@@ -41,7 +41,7 @@ end
 
 # SEE AVAILABLE SESSIONS
 
-get 'bookings/new/sessions/:id' do
-    selected_class = Class.find_by_id(params[:id])
-    erb(:"bookings/sesssions")
+get '/bookings/new/:id/sessions' do
+    @gym_class = GymClass.find_by_id(params['id'].to_i)
+    erb(:"bookings/sessions")
 end

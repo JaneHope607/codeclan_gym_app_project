@@ -1,1 +1,18 @@
-<h1>hello</h1>
+<h1>Class Name: <%= @gym_class.name%></h1>
+<h2>Upcoming Sessions:</h2>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+        </tr>
+        <% @gym_class.sessions.each do |gym_class|%>
+        <tr>
+            <td><%= gym_class.day%></td>
+            <td><%= gym_class.start_time%></td>
+            <td><%= gym_class%></td>
+        </tr>
+        <% end %>
+    </table>
