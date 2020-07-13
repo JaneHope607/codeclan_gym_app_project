@@ -11,28 +11,40 @@ member1 = Member.new({
     "first_name" => "Jessica",
     "last_name" => "Smith",
     "dob" => "1978-11-12",
-    "email" => "jesssmith@gmail.com"
+    "email" => "jesssmith@gmail.com",
+    "number" => "07863738838",
+    "date_joined" => "2020-07-12",
+    "membership_type" => "Premium"
 })
 
 member2 = Member.new({
     "first_name" => "Emma",
     "last_name" => "Gray",
     "dob" => "1982-02-18",
-    "email" => "emmagray@gmail.com"
+    "email" => "emmagray@gmail.com",
+    "number" => "07898282828",
+    "date_joined" => "2020-07-13",
+    "membership_type" => "Standard"
 })
 
 member3 = Member.new({
     "first_name" => "Louis",
     "last_name" => "Evans",
     "dob" => "1990-07-24",
-    "email" => "louisevans@gmail.com"
+    "email" => "louisevans@gmail.com",
+    "number" => "07812323343",
+    "date_joined" => "2020-07-11",
+    "membership_type" => "Premium"
 })
 
 member4 = Member.new({
     "first_name" => "Robert",
     "last_name" => "Short",
     "dob" => "1995-10-10",
-    "email" => "robertshort@gmail.com"
+    "email" => "robertshort@gmail.com",
+    "number" => "07123228826",
+    "date_joined" => "2020-07-10",
+    "membership_type" => "Standard"
 })
 
 member1.save()
