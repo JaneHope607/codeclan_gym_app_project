@@ -1,6 +1,6 @@
 <h1>New Booking</h1>
 
-<form method="post" action="/bookings/new/sessions">
+<form method="post" action="/bookings">
 
     <label>
     Select A Member:
@@ -12,10 +12,12 @@
     </label>
 
     <label>
-    Select Class:
-        <select name="gymclass_id">
-            <% for gym_class in @classes%>
-                <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
+    Select Available Session:
+        <select name="session_id">
+            <% for session in @sessions%>
+                <% if session.members.count < session.capacity%>
+                    <option value="<%= session.id%>"> <%= session.gym_class.name%> <%= session.day%> <%= session.start_time%></option>
+                <% end %>
              <% end %>
         </select>
     </label>

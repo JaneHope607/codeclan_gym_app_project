@@ -26,8 +26,8 @@ end
 # CREATE
 
 post '/bookings' do
-    @booking = Booking.new(params)
-    @booking.save()
+    booking = Booking.new(params)
+    booking.save()
     erb(:"bookings/create")
 end
 
@@ -41,7 +41,7 @@ end
 
 # SEE AVAILABLE SESSIONS
 
-get '/bookings/new/:id/sessions' do
-    @gym_class = GymClass.find_by_id(params['id'].to_i)
-    erb(:"bookings/sessions")
-end
+# get '/bookings/new/:id/sessions' do
+#     @gym_class = GymClass.find_by_id(params['id'].to_i)
+#     erb(:"bookings/sessions")
+# end
