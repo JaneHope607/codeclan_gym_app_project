@@ -1,4 +1,7 @@
-<form method="post" action="/classes">
+<h1>New Booking</h1>
+
+<form method="post" action="/bookings">
+
     <label>
     Select A Member:
         <select name="member_id">
@@ -12,10 +15,10 @@
     Select A Class:
         <select name="gymclass_id">
             <% for gym_class in @gym_classes%>
-            <% if gym_class.capacity > 0%>
+            <% if gym_class.members.count() < gym_class.capacity %>
                 <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
             <% else %>
-                <p>I'm sorry, <%= gym_class.name%> is fully booked!</p>
+                <%= "this class is full!" %>
             <% end %>
             <% end %>
         </select>

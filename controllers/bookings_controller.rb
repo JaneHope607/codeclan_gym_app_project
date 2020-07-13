@@ -20,3 +20,13 @@ get '/bookings/new' do
     erb(:"bookings/new")
 end
 
+# CREATE
+
+post '/bookings' do
+    @booking = Booking.new(params)
+    @booking.save()
+    @member = Member.find_by_id(params['id'].to_i)
+    @gym_classe = GymClass.find_by_id(params['id'].to_i)
+    erb(:"bookings/create")
+end
+

@@ -88,4 +88,5 @@ class Booking
         results = SqlRunner.run(sql, values).first
         return GymClass.new(results)
     end
+
 end
