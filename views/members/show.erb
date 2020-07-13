@@ -6,13 +6,4 @@
     <p>Member Since: <%= @member.date_joined%></p>
     <p>Memerbship Type: <%= @member.membership_type%></p>
 
-
-    <form method="get" action="/members/<%=@member.id%>/edit">
-        <input type="submit" value="Update Member"/>
-    </form>
-
-    <form method="post" action="/members/<%=@member.id%>/delete">
-        <input type="submit" value="Deactivate Member"/>
-    </form>
-
     <a href="/members">Back To All Members</a>

@@ -61,3 +61,11 @@ get '/members/:id/bookings' do
     @member = Member.find_by_id(params['id'].to_i)
     erb(:"members/bookings")
 end
+
+# DELETE booking for a member
+
+post '/members/:id/bookings/delete' do
+    booking = Booking.find_by_id(params['id'].to_i)
+    booking.delete()
+    redirect to "/bookings"
+end

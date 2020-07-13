@@ -4,20 +4,16 @@
     <table>
         <tr>
             <th>Class Name</th>
-            <th></th>
+            <th>Session</th>
             <th>Instructor</th>
-            <th></th>
             <th>Duration (mins)</th>
         </tr>
-        <% @member.booked_gym_classes.each do |gym_class|%>
+        <% for session in @member.booked_sessions%>
         <tr>
-            <td><%= gym_class.name%></td>
-            <td></td>
-            <td><%= gym_class.instructor%></td>
-            <td></td>
-            <td><%= gym_class.duration%></td>
-            <td></td>
-            <td><%=  %>Remove</td>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.day%> @ <%= session.start_time%></td>
+            <td><%= session.gym_class.instructor%></td>
+            <td><%= session.gym_class.duration%></td>
         </tr>
         <% end %>
     </table>
