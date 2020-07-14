@@ -27,9 +27,11 @@ end
 
 post '/bookings' do
     @bookings = Booking.find_all()
-    @bookingexists = @bookings.find { |booking| booking.member_id == params['member_id'].to_i && booking.session_id == params['session_id'].to_i}
+    @bookingexists = @bookings.detect { |booking| booking.member_id == params['member_id'].to_i && booking.session_id == params['session_id'].to_i}
     if @bookingexists
         erb(:"bookings/error")
+    elsif @peak = @bookings.detect { |booking| }
+
     else
         booking = Booking.new(params)
         booking.save()

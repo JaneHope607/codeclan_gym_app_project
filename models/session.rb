@@ -127,14 +127,14 @@ class Session
 
     # Method to get peak times
 
-    def peak_times()
-        sql = "SELECT *
-        FROM gym_sessions
-        WHERE start_time BETWEEN
-        '11:00:00' AND '13:00:00' OR start_time BETWEEN
-        '16:00:00' AND '18:00:00'"
-        results = results = SqlRunner.run(sql)
-        return Session.map_items(results)
-    end
+    # def peak_times()
+    #     sql = "SELECT *
+    #     FROM gym_sessions
+    #     WHERE start_time BETWEEN
+    #     '11:00:00' AND '13:00:00' OR start_time BETWEEN
+    #     '16:00:00' AND '18:00:00'"
+    #     results = results = SqlRunner.run(sql)
+    #     return Session.map_items(results)
+    # end
 
 end

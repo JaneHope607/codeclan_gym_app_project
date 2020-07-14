@@ -34,7 +34,7 @@ post '/sessions' do
     @sessions = Session.find_all()
     @session = Session.new(params)
     @session.save()
-    erb(:"sessions/create")
+    redirect to "/sessions"
 end
 
 # EDIT
