@@ -38,18 +38,19 @@ end
 
 # EDIT
  
-# get '/sessions/:id/edit' do
-#     @session = Session.find_by_id(params['id'].to_i)
-#     erb(:"sessions/edit")
-# end
+get '/sessions/:id/edit' do
+    @session = Session.find_by_id(params['id'].to_i)
+    @gym_classes = GymClass.find_all()
+    erb(:"sessions/edit")
+end
 
 # UPDATE
 
-# post '/sessions/:id' do
-#     member = Member.new(params)
-#     member.update()
-#     redirect to "/members/#{params['id']}"
-# end
+post '/sessions/:id' do
+    session = Session.new(params)
+    session.update()
+    redirect to "/sessions"
+end
 
 # DELETE
 

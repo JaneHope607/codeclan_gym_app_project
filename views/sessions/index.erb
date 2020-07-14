@@ -10,9 +10,13 @@
 
     <p>Number Members Booked: <%= session.members.count%></p>
 
-    <td><form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input type="submit" value="Delete Session"/>
-        </form></td>
+    <form method="get" action="/sessions/<%=session.id%>/edit">
+        <input type="submit" value="Update Session"/>
+    </form>
+
+    <form method="post" action="/sessions/<%= session.id%>/delete">
+        <input type="submit" value="Delete Session"/>
+    </form>
 
     <hr/>
 <% end %>
