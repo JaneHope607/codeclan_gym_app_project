@@ -8,8 +8,8 @@ CREATE TABLE members (
     first_name VARCHAR(255) not null,
     last_name VARCHAR (255) not null,
     dob VARCHAR(255),
-    email VARCHAR(255),
-    number VARCHAR(15),
+    email VARCHAR(255) not null,
+    number VARCHAR(15) not null,
     date_joined VARCHAR(255),
     membership_type VARCHAR(255) not null
 );
@@ -18,15 +18,15 @@ CREATE TABLE gym_classes (
     id SERIAL primary key,
     name VARCHAR(255) not null,
     duration INT not null,
-    instructor VARCHAR(255)
+    instructor VARCHAR(255) not null
 );
 
 CREATE TABLE gym_sessions (
     id SERIAL primary key,
-    gymclass_id INT REFERENCES gym_classes(id) ON DELETE CASCADE,
-    day INT,
-    start_time TIME,
-    capacity INT
+    gymclass_id INT REFERENCES gym_classes(id) ON DELETE CASCADE not null,
+    day INT not null,
+    start_time TIME not null,
+    capacity INT not null
 );
 
 CREATE TABLE bookings (

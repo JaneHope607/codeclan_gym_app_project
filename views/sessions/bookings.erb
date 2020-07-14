@@ -6,6 +6,7 @@
     <p>Remaining Spaces: <%= @session.remaining_spaces()%></p>
 
     <h2>Bookings</h2>
+
     <table>
         <tr>
             <th>Member Name</th>
@@ -17,8 +18,10 @@
             <td><%= session.full_name()%></td>
             <td><%= session.email%></td>
             <td><%= session.membership_type%></td>
+            </td>
         <% end %>
         </tr>
     </table>
 
 <a href="/sessions">Back To All Sessions</a>
+

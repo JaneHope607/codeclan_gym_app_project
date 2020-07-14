@@ -31,6 +31,7 @@ end
 # CREATE 
 
 post '/sessions' do
+    @sessions = Session.find_all()
     @session = Session.new(params)
     @session.save()
     erb(:"sessions/create")
@@ -66,3 +67,4 @@ get '/sessions/:id/bookings' do
     @session = Session.find_by_id(params['id'].to_i)
     erb(:"sessions/bookings")
 end
+

@@ -26,9 +26,15 @@ end
 # CREATE
 
 post '/bookings' do
-    booking = Booking.new(params)
-    booking.save()
-    redirect to "/bookings"
+    @bookings = Booking.find_all()
+    @bookingexists = @bookings.find { |booking| booking.member_id == params['member_id'].to_i && booking.session_id == params['session_id'].to_i}
+    if @bookingexists
+        erb(:"bookings/error")
+    else
+        booking = Booking.new(params)
+        booking.save()
+        redirect to "/bookings"
+    end
 end
 
 # DELETE

@@ -66,9 +66,11 @@ end
 
 # ADD MEMBER TO CLASS
 
-get '/members/:id/sessions' do
-    @member = Member.find_by_id(params['id'].to_i)
-    @sessions = Session.find_all()
-    erb(:"members/gymclass")
-end
+# get '/members/:id/sessions' do
+#     @member = Member.find_by_id(params['id'].to_i)
+#     @sessions = Session.find_all()
+#     booking = Booking.new(params)
+#     booking.save()
+#     erb(:"members/gymclass")
+# end
 
