@@ -7,13 +7,18 @@
     <p><a href="/members/<%= member.id%>">Full profile</a></p>
     <p><a href="/members/<%= member.id%>/bookings">Classes Booked</a></p>
 
-    <form method="get" action="/members/<%=member.id%>/edit">
-        <input type="submit" value="Edit Member"/>
-    </form>
+    
+    <div class="btn">
+        <form method="get" action="/members/<%=member.id%>/edit">
+            <input type="submit" value="Edit Member"/>
+        </form>
+    </div>
 
-    <form method="post" action="/members/<%=member.id%>/delete">
-        <input type="submit" value="Deactivate Member"/>
-    </form>
+    <div class="btn">
+        <form method="post" action="/members/<%=member.id%>/delete">
+            <input type="submit" value="Deactivate Member"/>
+        </form>
+    </div>
 
     <hr/>
 
