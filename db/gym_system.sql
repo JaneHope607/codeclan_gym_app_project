@@ -25,7 +25,7 @@ CREATE TABLE gym_sessions (
     id SERIAL primary key,
     gymclass_id INT REFERENCES gym_classes(id) ON DELETE CASCADE,
     day INT,
-    start_time VARCHAR(255),
+    start_time TIME,
     capacity INT
 );
 

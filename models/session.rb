@@ -127,8 +127,8 @@ class Session
 
     # Method to get peak and off peak times
 
-    def peak_times()
-        if 
-    end
+    # def peak_times()
+    #     return if @day == 5 || @day == 6 || 
+    # end
 
 end

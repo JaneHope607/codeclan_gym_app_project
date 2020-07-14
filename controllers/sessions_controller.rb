@@ -25,7 +25,7 @@ end
 
 get '/sessions/:id' do
     @session = Session.find_by_id(params['id'].to_i)
-    erb(:"sessions/show")
+    erb(:"sessions/bookings")
 end
 
 # CREATE 
