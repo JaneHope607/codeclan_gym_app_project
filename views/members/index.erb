@@ -14,6 +14,10 @@
     <form method="post" action="/members/<%=member.id%>/delete">
         <input type="submit" value="Deactivate Member"/>
     </form>
+
+    <form method="get" action="/members/<%=member.id%>/sessions">
+        <input type="submit" value="Add To Class"/>
+    </form>
     <hr/>
 
 <% end%>

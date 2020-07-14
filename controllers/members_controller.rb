@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/member.rb')
 require_relative('../models/booking.rb')
+require_relative('../models/session.rb')
 also_reload('../models/*')
 
 # INDEX
@@ -61,5 +62,13 @@ end
 get '/members/:id/bookings' do
     @member = Member.find_by_id(params['id'].to_i)
     erb(:"members/bookings")
+end
+
+# ADD MEMBER TO CLASS
+
+get '/members/:id/sessions' do
+    @member = Member.find_by_id(params['id'].to_i)
+    @sessions = Session.find_all()
+    erb(:"members/gymclass")
 end
 

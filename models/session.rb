@@ -125,7 +125,7 @@ class Session
         end   
     end
 
-    # Method to get peak and times
+    # Method to get peak times
 
     def peak_times()
         sql = "SELECT *

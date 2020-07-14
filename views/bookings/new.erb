@@ -1,27 +1,31 @@
-<h1>New Booking</h1>
+<h2>New Booking</h2>
 
 <form method="post" action="/bookings">
+    <div class="form-wrapper">
 
-    <label>
-    Select A Member:
-        <select name="member_id">
-            <% for member in @members%>
-                <option value="<%= member.id%>"><%= member.full_name()%></option>
-            <% end %>
-        </select>
-    </label>
-
-    <label>
-    Select Available Class:
-        <select name="session_id">
-            <% for session in @sessions%>
-                <% if session.members.count < session.capacity %>
-                    <option value="<%=session.id%>"> <%= session.gym_class.name%> - <%=session.get_day()%> @ <%=session.start_time%></option>
+        <div class="form-el">   
+            <label for="member">Select A Member:</label>
+            <select name="member_id" id="member_id">
+                <% for member in @members%>
+                    <option value="<%= member.id%>"><%= member.full_name()%></option>
                 <% end %>
-            <% end %>
-        </select>
-    </label>
+            </select>
+        </div>
 
-    <input type="submit" value="Create Booking"/>
+        <div class="form-el">   
+            <label for="session">Select Available Class:</label>
+            <select name="session_id" id="session_id">
+                <% for session in @sessions%>
+                    <% if session.members.count < session.capacity %>
+                        <option value="<%=session.id%>"> <%= session.gym_class.name%> - <%=session.get_day()%> @ <%=session.start_time%></option>
+                    <% end %>
+                <% end %>
+            </select>
+        </div>
 
+        <div class="form-el">   
+            <input type="submit" value="Create Booking"/>
+        </div>
+
+    </div>
 </form>
