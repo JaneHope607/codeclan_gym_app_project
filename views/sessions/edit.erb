@@ -1,33 +1,47 @@
+<h2>Edit Session:</h2>
+
 <form method="post" action="/sessions/<%= @session.id%>">
+    <div class="form-wrapper">
     
-    <label>
-    Class Type:
-        <select name="gymclass_id" selected="<%= @session.gymclass_id%>">
-            <% @gym_classes.each do |gym_class| %>
-                <% if gym_class.id == @session.gym_class.id%>
-                    <option value=<%= gym_class.id%> selected><%= gym_class.name%></option>
+        <div class="form-el">
+            <label>
+            Class Type:
+            <select name="gymclass_id" selected="<%= @session.gymclass_id%>">
+                <% @gym_classes.each do |gym_class| %>
+                    <% if gym_class.id == @session.gym_class.id%>
+                        <option value=<%= gym_class.id%> selected><%= gym_class.name%></option>
+                    <% end %>
                 <% end %>
-            <% end %>
-         </select>
-    </label>
-    
-    <label for="day">Day:</label>
-        <select id="day" name="day">
-            <option value="1" <%= "selected" if @session.day == 1%>> Monday</option>
-            <option value="2" <%= "selected" if @session.day == 2%>>Tuesday</option>
-            <option value="3" <%= "selected" if @session.day == 3%>>Wednesday</option>
-            <option value="4" <%= "selected" if @session.day == 4%>>Thursday</option>
-            <option value="5" <%= "selected" if @session.day == 5%>>Friday</option>
-            <option value="6" <%= "selected" if @session.day == 6%>>Saturday</option>
-            <option value="7" <%= "selected" if @session.day == 7%>>Sunday</option>
-        </select>
+            </select>
+            </label>
+        </div>
 
-    <label for="start-time">Start Time:</label>
-        <input id="start-time" type="time" value=<%= @session.start_time%> name="start_time" min="09:00" max="18:00"/>
+        <div class="form-el">
+            <label for="day">Day:</label>
+                <select id="day" name="day">
+                <option value="1" <%= "selected" if @session.day == 1%>> Monday</option>
+                <option value="2" <%= "selected" if @session.day == 2%>>Tuesday</option>
+                <option value="3" <%= "selected" if @session.day == 3%>>Wednesday</option>
+                <option value="4" <%= "selected" if @session.day == 4%>>Thursday</option>
+                <option value="5" <%= "selected" if @session.day == 5%>>Friday</option>
+                <option value="6" <%= "selected" if @session.day == 6%>>Saturday</option>
+                <option value="7" <%= "selected" if @session.day == 7%>>Sunday</option>
+            </select>
+        </div>
 
-    <label for="capacity">Cacpacity:</label>
-        <input id="capacity" type="number" value=<%= @session.capacity%> name="capacity" min="0" max="50"/>
-    
-    <input type="submit" value="Update Session"/>
+        <div class="form-el">
+            <label for="start-time">Start Time:</label>
+            <input id="start-time" type="time" value=<%= @session.start_time%> name="start_time" min="09:00" max="18:00"/>
+        </div>
+
+        <div class="form-el">
+            <label for="capacity">Cacpacity:</label>
+            <input id="capacity" type="number" value=<%= @session.capacity%> name="capacity" min="0" max="50"/>
+        </div>
+
+        <div class="form-el">
+            <input type="submit" value="Update Session"/>
+        </div>
+    </div>
 
 </form>
