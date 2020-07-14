@@ -12,13 +12,14 @@
     </label>
 
     <label>
-    Select Available Session:
-        <select name="session_id">
+    Select Available Class:
+    <label>
+        <select name="session.id">
             <% for session in @sessions%>
                 <% if session.members.count < session.capacity%>
-                    <option value="<%= session.id%>"> <%= session.gym_class.name%> <%= session.day%> <%= session.start_time%></option>
+                    <option value="<%=session.id%>"> <%= session.gym_class.name%> <%=session.day%> @ <%=session.start_time%></option>
                 <% end %>
-             <% end %>
+            <% end %>
         </select>
     </label>
 

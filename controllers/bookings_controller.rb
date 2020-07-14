@@ -18,7 +18,7 @@ end
 get '/bookings/new' do
     @bookings = Booking.find_all()
     @sessions = Session.find_all()
-    @classes = GymClass.find_all()
+    @gym_classes = GymClass.find_all()
     @members = Member.find_all()
     erb(:"bookings/new")
 end
