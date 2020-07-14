@@ -2,27 +2,36 @@
 
 <h1>All Bookings</h1>
 
-    <table>
+    <table class="table-wrapper">
         <tr>
             <th>Booking Reference</th>
+            <th></th>
             <th>Member Name</th>
+            <th></th>
             <th>Class</th>
+            <th></th>
             <th>Day</th>
+            <th></th>
             <th>Session Time</th>
+            <th></th>
         </tr>
         <hr/>
         <% for booking in @bookings%>
         <tr>
             <td><%= booking.id%></td>
+            <td></td>
             <td><%= booking.member.full_name()%></td>
+            <td></td>
             <td><%= booking.session.gym_class.name%></td>
+            <td></td>
             <td><%= booking.session.get_day()%></td>
+            <td></td>
             <td><%= booking.session.start_time%></td>
+            <td></td>
             <td><form method="post" action="/bookings/<%= booking.id%>/delete">
                     <input type="submit" value="Delete Booking"/>
                 </form></td>
         <% end %>
         </tr>
     </table>
-
 

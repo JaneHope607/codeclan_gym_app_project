@@ -1,18 +1,31 @@
+<h2>New Class:</h2>
+    
 <form method="post" action="/classes">
-    <label for="class-name">Class Name:</label>
-        <input id="class-name" type="text" name="name"/>
-    
-    <label for="duration">Duration (mins):</label>
-        <select id="duration" name="duration">
-            <option value="15">15</option>
-            <option value="30">30</option>
-            <option value="45">45</option>
-            <option value="60">60</option>
-        </select>
+    <div class="form-wrapper">
 
-    <label for="instructor">Instructor:</label>
-        <input id="instructor" type="text" name="instructor"/>
-    
-    <input type="submit" value="Create Class"/>
+        <div class="form-el">
+            <label for="class-name">Class Name:</label>
+            <input id="class-name" type="text" name="name"/>
+        </div>
 
+        <div class="form-el">
+            <label for="duration">Duration (mins):</label>
+            <select id="duration" name="duration">
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+                <option value="60">60</option>
+            </select>
+        </div>
+
+        <div class="form-el">
+            <label for="instructor">Instructor:</label>
+            <input id="instructor" type="text" name="instructor"/>
+        </div>
+
+        <div class="form-el">
+            <input type="submit" value="Create Class"/>
+        </div>
+        
+    </div>
 </form>

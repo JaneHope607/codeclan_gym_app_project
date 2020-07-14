@@ -28,7 +28,7 @@ end
 post '/bookings' do
     booking = Booking.new(params)
     booking.save()
-    erb(:"bookings/create")
+    redirect to "/bookings"
 end
 
 # DELETE

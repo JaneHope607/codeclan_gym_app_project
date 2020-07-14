@@ -110,4 +110,14 @@ class Booking
         values = [@member_id]
         SqlRunner.run(sql, values)
     end
+
+    # def self.check_if_exists(member_id, session_id)
+    #     sql = "SELECT count FROM bookings
+    #     WHERE member_id = $1
+    #     AND session_id = $2"
+    #     values = [member_id, session_id]
+    #     result = SqlRunner.run(sql, values).first
+    #     return Booking.new(result)
+    # end
+
 end
