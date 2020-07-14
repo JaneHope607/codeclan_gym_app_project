@@ -110,15 +110,13 @@ class GymClass
         return Session.map_items(results)
     end
 
-    # Deletes all members from a class (class gets deleted)
+    # Deletes all sessions for a class (class gets deleted)
 
-    # def delete_members()
-    #     sql = "DELETE FROM bookings
-    #     INER JOIN gym_sessions
-    #     ON booking.s
-    #     WHERE bookings.gymclass_id = $1"
-    #     values = [@id]
-    #     SqlRunner.run(sql, values)
-    # end
+    def delete_all_sessions()
+        sql = "DELETE FROM gym_sessions
+        WHERE gym_sessions.gymclass_id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
 
 end
