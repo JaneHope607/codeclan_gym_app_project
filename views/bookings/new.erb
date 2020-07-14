@@ -15,8 +15,8 @@
     Select Available Class:
         <select name="session_id">
             <% for session in @sessions%>
-                <% if session.members.count < session.capacity && %>
-                    <option value="<%=session.id%>"> <%= session.gym_class.name%> <%=session.day%> @ <%=session.start_time%></option>
+                <% if session.members.count < session.capacity %>
+                    <option value="<%=session.id%>"> <%= session.gym_class.name%> <%=session.get_day()%> @ <%=session.start_time%></option>
                 <% end %>
             <% end %>
         </select>

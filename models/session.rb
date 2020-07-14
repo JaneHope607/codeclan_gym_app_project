@@ -8,7 +8,7 @@ class Session
     def initialize(options)
         @id = options['id'].to_i if options['id']
         @gymclass_id = options['gymclass_id'].to_i
-        @day = options['day']
+        @day = options['day'].to_i
         @start_time = options['start_time']
         @capacity = options['capacity'].to_i
     end
@@ -109,6 +109,18 @@ class Session
 
     def increase_capacity()
         @capacity += 1
+    end
+    
+    def get_day()
+        case @day
+            when 1 then 'Monday' 
+            when 2 then 'Tuesday'    
+            when 3 then 'Wednesday'
+            when 4 then 'Thursday'    
+            when 5 then 'Friday'    
+            when 6 then 'Saturday'    
+            when 7 then 'Sunday' 
+        end   
     end
 
 end

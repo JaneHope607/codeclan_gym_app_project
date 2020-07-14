@@ -92,49 +92,49 @@ gymclass5.save()
 
 session1 = Session.new({
     "gymclass_id" => gymclass3.id,
-    "day" => "Wednesday",
+    "day" => "3",
     "start_time" => "12:30",
     "capacity" => "15"
 })
 
 session2 = Session.new({
     "gymclass_id" => gymclass4.id,
-    "day" => "Thurday",
+    "day" => "4",
     "start_time" => "14:00",
     "capacity" => "20"
 })
 
 session3 = Session.new({
     "gymclass_id" => gymclass4.id,
-    "day" => "Friday",
+    "day" => "5",
     "start_time" => "12:30",
     "capacity" => "20"
 })
 
 session4 = Session.new({
     "gymclass_id" => gymclass1.id,
-    "day" => "Wednesday",
+    "day" => "3",
     "start_time" => "11:00",
     "capacity" => "10"
 })
 
 session5 = Session.new({
     "gymclass_id" => gymclass2.id,
-    "day" => "Sunday",
+    "day" => "7",
     "start_time" => "14:30",
     "capacity" => "10"
 })
 
 session6 = Session.new({
     "gymclass_id" => gymclass3.id,
-    "day" => "Tuesday",
+    "day" => "2",
     "start_time" => "12:30",
     "capacity" => "20"
 })
 
 session7 = Session.new({
     "gymclass_id" => gymclass3.id,
-    "day" => "Friday",
+    "day" => "5",
     "start_time" => "15:45",
     "capacity" => "15"
 })

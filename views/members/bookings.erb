@@ -11,7 +11,7 @@
         <% for session in @member.booked_sessions%>
         <tr>
             <td><%= session.gym_class.name%></td>
-            <td><%= session.day%> @ <%= session.start_time%></td>
+            <td><%= session.get_day()%> @ <%= session.start_time%></td>
             <td><%= session.gym_class.instructor%></td>
             <td><%= session.gym_class.duration%></td>
         <% end %>

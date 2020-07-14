@@ -16,7 +16,7 @@
             <td><%= booking.id%></td>
             <td><%= booking.member.full_name()%></td>
             <td><%= booking.session.gym_class.name%></td>
-            <td><%= booking.session.day%></td>
+            <td><%= booking.session.get_day()%></td>
             <td><%= booking.session.start_time%></td>
             <td><form method="post" action="/bookings/<%= booking.id%>/delete">
                     <input type="submit" value="Delete Booking"/>

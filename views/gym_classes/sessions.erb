@@ -11,7 +11,7 @@
         </tr>
         <% @gym_class.sessions.each do |gym_class|%>
         <tr>
-            <td><%= gym_class.day%></td>
+            <td><%= gym_class.get_day()%></td>
             <td><%= gym_class.start_time%></td>
             <td><%= gym_class.gym_class.duration()%> mins </td>
             <td><%= gym_class.remaining_spaces()%></td>

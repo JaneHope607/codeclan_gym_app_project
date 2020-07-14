@@ -1,9 +1,11 @@
 <a href="/sessions/new">Add New Session</a>
 
+<p>Monday</p>
+
 <% for session in @sessions%>
     <p>Class Name: <%= session.gym_class.name%></p>
     <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Day: <%= session.day%></p>
+    <p>Day: <%= session.get_day()%></p>
     <p>Start Time: <%= session.start_time%></p>
     <p>Duration: <%= session.gym_class.duration%> mins</p>
     <p>Spaces Left: <%= session.remaining_spaces()%></p>
