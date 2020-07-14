@@ -110,6 +110,8 @@ class Session
     def increase_capacity()
         @capacity += 1
     end
+
+    # Gets the number represesenting day of week and turns into string of day 
     
     def get_day()
         case @day
@@ -121,6 +123,12 @@ class Session
             when 6 then 'Saturday'    
             when 7 then 'Sunday' 
         end   
+    end
+
+    # Method to get peak and off peak times
+
+    def peak_times()
+        if 
     end
 
 end

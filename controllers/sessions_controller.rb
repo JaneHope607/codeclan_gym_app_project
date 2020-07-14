@@ -59,3 +59,10 @@ post '/sessions/:id/delete' do
     session.delete()
     redirect to "/sessions"
 end
+
+# SHOW ALL BOOKED MEMBERS FOR SESSION
+
+get '/sessions/:id/bookings' do
+    @session = Session.find_by_id(params['id'].to_i)
+    erb(:"sessions/bookings")
+end

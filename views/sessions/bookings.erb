@@ -1,0 +1,24 @@
+    <p>Class: <%= @session.gym_class.name%></p>
+    <p>Day: <%= @session.get_day()%></p>
+    <p>Start Time: <%= @session.start_time%></p>
+    <p>Instructor: <%= @session.gym_class.instructor%></p>
+    <p>Capacity: <%= @session.capacity%></p>
+    <p>Remaining Spaces: <%= @session.remaining_spaces()%></p>
+
+    <h2>Bookings</h2>
+    <table>
+        <tr>
+            <th>Member Name</th>
+            <th>Email</th>
+            <th>Membership type</th>
+        </tr>
+        <% for session in @session.members()%>
+        <tr>
+            <td><%= session.full_name()%></td>
+            <td><%= session.email%></td>
+            <td><%= session.membership_type%></td>
+        <% end %>
+        </tr>
+    </table>
+
+<a href="/sessions">Back To All Sessions</a>
