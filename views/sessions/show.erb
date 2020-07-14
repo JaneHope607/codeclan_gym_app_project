@@ -1,0 +1,9 @@
+<h1>Session Details:</h1>
+    <p>Class: <%= @session.gym_class.name%></p>
+    <p>Instructor: <%= @session.gym_class.instructor%></p>
+    <p>Day: <%= @session.day%></p>
+    <p>Start Time: <%= @session.start_time%></p>
+    <p>Capacity: <%= @session.capacity%></p>
+    <p>Remaining Spaces: <%= @session.remaining_spaces()%></p>
+
+<a href="/sessions">Back To All Sessions</a>

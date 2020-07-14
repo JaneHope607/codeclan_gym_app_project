@@ -12,15 +12,14 @@
     </label>
     
     <label for="day">Day:</label>
-        <select id="duration" name="duration">
-            <option value="monday" <%= "selected" if @session.day == "Monday"%>> Monday</option>
-            <option value="tuesday" <%= "selected" if @session.day == "Tuesday"%>>Tuesday</option>
-            <option value="wednesday" <%= "selected" if @session.day == "Wednesday"%>>Wednesday</option>
-            <option value="thursday" <%= "selected" if @session.day == "Thursday"%>>Thursday</option>
-            <option value="friday" <%= "selected" if @session.day == "Friday"%>>Friday</option>
-            <option value="saturday" <%= "selected" if @session.day == "Saturday"%>>Saturday</option>
-            <option value="sunday" <%= "selected" if @session.day == "Sunday"%>>Sunday</option>
-
+        <select id="day" name="day">
+            <option value="monday" <%= "selected" if @session.day == "monday"%>> Monday</option>
+            <option value="tuesday" <%= "selected" if @session.day == "tuesday"%>>Tuesday</option>
+            <option value="wednesday" <%= "selected" if @session.day == "wednesday"%>>Wednesday</option>
+            <option value="thursday" <%= "selected" if @session.day == "thursday"%>>Thursday</option>
+            <option value="friday" <%= "selected" if @session.day == "friday"%>>Friday</option>
+            <option value="saturday" <%= "selected" if @session.day == "saturday"%>>Saturday</option>
+            <option value="sunday" <%= "selected" if @session.day == "sunday"%>>Sunday</option>
         </select>
 
     <label for="start-time">Start Time:</label>

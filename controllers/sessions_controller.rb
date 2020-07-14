@@ -49,7 +49,7 @@ end
 post '/sessions/:id' do
     session = Session.new(params)
     session.update()
-    redirect to "/sessions"
+    redirect to "/sessions/#{params['id']}"
 end
 
 # DELETE
