@@ -125,19 +125,16 @@ class Session
         end   
     end
 
-    # Method to get peak and off peak times
-
-    def peak_times()
-        @start_time.include?(Time.new(16, 00, 00), Time.new(18, 00, 00)) 
-        @start_time.between?(Time.new(11, 00, 00), Time.new(13, 00, 00)) 
-    end
+    # Method to get peak and times
 
     def peak_times()
         sql = "SELECT *
         FROM gym_sessions
         WHERE start_time BETWEEN
-        '12:00:00' AND '14:00:00'"
+        '11:00:00' AND '13:00:00' OR start_time BETWEEN
+        '16:00:00' AND '18:00:00'"
         results = results = SqlRunner.run(sql)
         return Session.map_items(results)
     end
+
 end

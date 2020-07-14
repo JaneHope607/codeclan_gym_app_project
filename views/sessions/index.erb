@@ -12,7 +12,6 @@
 
     <p>Number Members Booked: <%= session.members.count%></p>
     <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <form method="get" action="/sessions/<%=session.id%>/edit">
         <input type="submit" value="Update Session"/>
     </form>
