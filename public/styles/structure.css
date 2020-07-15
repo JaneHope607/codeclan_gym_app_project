@@ -1,0 +1,70 @@
+body, html {
+    background-color: cornflowerblue;
+    font-family: 'Merriweather', serif;
+    padding: 0px;
+    margin: 0px;
+    color: #4d4d4d;;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+}
+
+header span {
+    font-size: 1.5rem;
+    align-self: center;
+    color: #696969;
+    margin: 20px;
+}
+
+header span .logo {
+    color: #404040;
+    font-weight: 550;
+}
+
+nav {
+    justify-content: flex-end;
+    width: 100%;
+    align-self: center;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-align: center;
+    margin-right: 1.5rem;
+    background-color: white;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #4d4d4d;
+    list-style: none;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: 35px;
+    transition: all 300ms ease-out;
+}
+
+
+ul li a:hover {
+    color: whitesmoke;
+    background-color: darkslategrey;
+}
+
+main {
+    position: relative;
+    top: 80px;
+}

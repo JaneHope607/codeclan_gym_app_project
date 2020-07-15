@@ -4,20 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Total Fitness</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Special+Elite" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
     <link rel="stylesheet" type="text/css" href="/styles/forms.css">
     <link rel="stylesheet" type="text/css" href="/styles/structure.css">
     <link rel="stylesheet" type="text/css" href="/styles/tables.css">
 </head>
+
 <body>
-<main class = "nav-bar">
-    <nav>
-        <ul>
-            <li><a href="/members">Members</a></li>
-            <li><a href="/classes">Classes</a></li>
-            <li><a href="/bookings">Bookings</a></li>
-            <li><a href="/sessions">Schedule</a></li>
-        </ul>
+    <header class = "nav-bar">
+        <span class="logo">TOTAL FITNESS</span>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/members">Members</a>
+                </li>
+                <li>
+                    <a href="/classes">Classes</a>
+                </li>
+                <li>
+                    <a href="/bookings">Bookings</a>
+                </li>
+                <li>
+                    <a href="/sessions">Sessions</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<main>
     <%= yield %>
+</main>
 </body>
 </html>

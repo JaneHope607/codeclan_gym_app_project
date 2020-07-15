@@ -5,21 +5,15 @@
     <table>
         <tr>
             <th>Day</th>
-            <th></th>
             <th>Start Time</th>
-            <th></th>
             <th>Duration</th>
-            <th></th>
             <th>Spaces Available</th>
         </tr>
         <% @gym_class.sessions.each do |gym_class|%>
         <tr>
             <td><%= gym_class.get_day()%></td>
-            <td></td>
             <td><%= gym_class.start_time%></td>
-            <td></td>
             <td><%= gym_class.gym_class.duration()%> mins </td>
-            <td></td>
             <td><%= gym_class.remaining_spaces()%></td>
         </tr>
         <% end %>

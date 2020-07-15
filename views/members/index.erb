@@ -8,15 +8,15 @@
     <p><a href="/members/<%= member.id%>/bookings">Classes Booked</a></p>
 
     
-    <div class="btn">
+    <div class="btn-container">
         <form method="get" action="/members/<%=member.id%>/edit">
-            <input type="submit" value="Edit Member"/>
+            <input class="btn" type="submit" value="Edit Member"/>
         </form>
     </div>
 
-    <div class="btn">
+    <div class="btn-container">
         <form method="post" action="/members/<%=member.id%>/delete">
-            <input type="submit" value="Deactivate Member"/>
+            <input class="btn" type="submit" value="Deactivate Member"/>
         </form>
     </div>
 
