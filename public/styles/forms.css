@@ -1,0 +1,19 @@
+.form-el {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    font-weight: 500;
+    padding: .25rem;
+    margin-right: 15px;
+  }
+  

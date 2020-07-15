@@ -68,3 +68,19 @@ main {
     position: relative;
     top: 80px;
 }
+
+.container {
+    display: block;
+    max-width: 100%;
+    background-color: darkkhaki;
+}
+
+.box {
+    padding: 20px;
+    border: 2px solid greenyellow
+}
+
+a {
+    text-decoration: none;
+    color: #4d4d4d;
+}
