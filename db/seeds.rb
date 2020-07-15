@@ -57,31 +57,31 @@ member4.save()
 gymclass1 = GymClass.new({
     "name" => "Yoga",
     "duration" => "60",
-    "instructor" => "Adam Parker"
+    "instructor" => "Mark Smith"
 })
 
 gymclass2 = GymClass.new({
     "name" => "Kettlebells",
     "duration" => "30",
-    "instructor" => "Ruth Longstone"
+    "instructor" => "Emily Watson"
 })
 
 gymclass3 = GymClass.new({
     "name" => "Spin",
     "duration" => "30",
-    "instructor" => "Emily Whitehall"
+    "instructor" => "William Blake"
 })
 
 gymclass4 = GymClass.new({
     "name" => "Pilates",
     "duration" => "45",
-    "instructor" => "Aaron Marsh"
+    "instructor" => "Troy Bolton"
 })
 
 gymclass5 = GymClass.new({
     "name" => "Absolute Abs",
     "duration" => "45",
-    "instructor" => "Mark Stone"
+    "instructor" => "Troy Bolton"
 })
 
 gymclass1.save()

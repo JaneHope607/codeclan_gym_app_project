@@ -2,23 +2,23 @@
 
 <a href="/classes/new" class="create">Add New Class</a>
 
-<div class="class-list">
+<div class="members-list">
 <% for gym_class in @gym_classes%>
-    <div class="class-box">
-        <p class="name">Class Name: <%= gym_class.name%></p>
+    <div class="member-box">
+        <p class="name">Class: <%= gym_class.name%></p>
         <p>Duration: <%= gym_class.duration%> mins</p>
         <p>Instructor: <%= gym_class.instructor%></p>
         <p><a href="/classes/<%= gym_class.id%>/sessions" class="show-link">Show All Sessions >></a></p>
 
         <div class="btn-container">
             <form method="get" action="/classes/<%= gym_class.id%>/edit">
-                <input class="btn" type="submit" value="Edit Class"/>
+                <input class="btn-edit" type="submit" value="Edit Class"/>
             </form>
         </div>
 
           <div class="btn-container">
             <form method="post" action="/classes/<%= gym_class.id%>/delete">
-                <input class="btn" type="submit" value="Delete Class"/>
+                <input class="btn-delete" type="submit" value="Delete Class"/>
             </form>
          </div>
     

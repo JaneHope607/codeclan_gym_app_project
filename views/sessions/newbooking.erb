@@ -6,11 +6,7 @@
     <div class="form-wrapper">
 
     <input type="hidden" name="session_id" id="session_id" value="<%=@session.id%>">
-
-        <%= @session.gym_class.name %>
-        <%= @session.get_day %>
-        <%= @session.start_time %>
-        </div>
+        <h1 class="class-name"><%= @session.gym_class.name %> - <%= @session.get_day %> @ <%= @session.start_time %></h1>
 
         <div class="form-el">   
             <label for="member">Select A Member:</label>
@@ -21,10 +17,8 @@
             </select>
         </div>
 
-     <input type="submit" value="Make Booking">
+     <input class="btn"type="submit" value="Make Booking">
     
     </div>
-
-    <a href="/bookings"> All Bookings>></a>
      
 </form>

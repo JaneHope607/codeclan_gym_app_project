@@ -4,15 +4,15 @@
     <p class="details">Capacity: <%= @session.capacity%></p>
     <p class="details">Remaining Spaces: <%= @session.remaining_spaces()%></p>
 
-    <h2>Bookings</h2>
 
 <div class="newsession">
 <% if @session.remaining_spaces < 0%>
     <p>This session is fully booked!</p>
 <% else %>
-     <p><a href="/sessions/<%= @session.id %>/newbooking">Enroll Member</a>
+     <p><a href="/sessions/<%= @session.id %>/newbooking" class="create">Enroll Member</a>
 <% end%>
     
+    <h1>Bookings</h1>
     <table>
         <tr>
             <th>Member Name</th>
@@ -29,5 +29,5 @@
         </tr>
     </table>
 
-<a href="/sessions">Back To All Sessions</a>
+<a class="link-back" href="/sessions"><i class="arrow left"></i>Back To All Sessions</a>
 

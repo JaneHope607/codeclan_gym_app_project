@@ -7,8 +7,8 @@
     <div class="member-box">
         <p class="name">Name: <%= member.full_name()%></p>
         <p>Contact Email: <%= member.email%></p>
-        <p><a href="/members/<%= member.id%>">Full profile >></a></p>
-        <p><a href="/members/<%= member.id%>/bookings">Classes Booked >></a></p>
+        <p><a href="/members/<%= member.id%>" class="show-link">Full profile >></a></p>
+        <p><a href="/members/<%= member.id%>/bookings" class="show-link">Classes Booked >></a></p>
 
     
         <div class="btn-container">

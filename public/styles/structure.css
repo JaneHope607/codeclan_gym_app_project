@@ -218,6 +218,7 @@ img {
 
 .details {
     margin-left: 2em;
+    margin-bottom: 2em;
 }
 
 .link-back {
@@ -225,4 +226,8 @@ img {
     margin-top: 1.5em;
     font-size: 1.1em;
     color: rgb(65, 4, 65);
+}
+
+.class-name {
+    text-align: left;
 }
