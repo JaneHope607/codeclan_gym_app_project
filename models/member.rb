@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Member
 
     attr_reader :id
-    attr_accessor :first_name, :last_name, :dob, :email, :number, :date_joined, :membership_type
+    attr_accessor :first_name, :last_name, :dob, :email, :number, :date_joined
     
     def initialize(options)
         @id = options['id'].to_i if options['id']
@@ -13,18 +13,17 @@ class Member
         @email = options['email']
         @number = options['number'].to_i
         @date_joined = options['date_joined']
-        @membership_type = options['membership_type']
     end
 
     # Method to save members
 
     def save()
         sql = "INSERT INTO members
-        (first_name, last_name, dob, email, number, date_joined, membership_type)
+        (first_name, last_name, dob, email, number, date_joined)
         VALUES
-        ($1, $2, $3, $4, $5, $6, $7)
+        ($1, $2, $3, $4, $5, $6)
         RETURNING id"
-        values = [@first_name, @last_name, @dob, @email, @number, @date_joined, @membership_type]
+        values = [@first_name, @last_name, @dob, @email, @number, @date_joined]
         results = SqlRunner.run(sql, values).first
         @id = results['id'].to_i
     end
@@ -55,10 +54,10 @@ class Member
 
     def update()
         sql = "UPDATE members
-        SET (first_name, last_name, dob, email, number, date_joined, membership_type)
-        = ($1, $2, $3, $4, $5, $6, $7)
-        WHERE id = $8"
-        values = [@first_name, @last_name, @dob, @email, @number, @date_joined, @membership_type, @id]
+        SET (first_name, last_name, dob, email, number, date_joined)
+        = ($1, $2, $3, $4, $5, $6)
+        WHERE id = $7"
+        values = [@first_name, @last_name, @dob, @email, @number, @date_joined, @id]
         SqlRunner.run(sql, values)
     end
 

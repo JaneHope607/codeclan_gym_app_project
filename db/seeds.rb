@@ -15,8 +15,7 @@ member1 = Member.new({
     "dob" => "1978-11-12",
     "email" => "jesssmith@gmail.com",
     "number" => "07863738838",
-    "date_joined" => "2020-07-12",
-    "membership_type" => "Premium"
+    "date_joined" => "2020-07-12"
 })
 
 member2 = Member.new({
@@ -25,8 +24,7 @@ member2 = Member.new({
     "dob" => "1982-02-18",
     "email" => "emmagray@gmail.com",
     "number" => "07898282828",
-    "date_joined" => "2020-07-13",
-    "membership_type" => "Standard"
+    "date_joined" => "2020-07-13"
 })
 
 member3 = Member.new({
@@ -35,8 +33,7 @@ member3 = Member.new({
     "dob" => "1990-07-24",
     "email" => "louisevans@gmail.com",
     "number" => "07812323343",
-    "date_joined" => "2020-07-11",
-    "membership_type" => "Premium"
+    "date_joined" => "2020-07-11"
 })
 
 member4 = Member.new({
@@ -45,8 +42,7 @@ member4 = Member.new({
     "dob" => "1995-10-10",
     "email" => "robertshort@gmail.com",
     "number" => "07123228826",
-    "date_joined" => "2020-07-10",
-    "membership_type" => "Standard"
+    "date_joined" => "2020-07-10"
 })
 
 member1.save()

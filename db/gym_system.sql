@@ -10,8 +10,7 @@ CREATE TABLE members (
     dob VARCHAR(255),
     email VARCHAR(255) not null,
     number VARCHAR(15) not null,
-    date_joined VARCHAR(255),
-    membership_type VARCHAR(255) not null
+    date_joined VARCHAR(255)
 );
 
 CREATE TABLE gym_classes (

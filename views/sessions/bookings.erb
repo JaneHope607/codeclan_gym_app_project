@@ -17,13 +17,13 @@
         <tr>
             <th>Member Name</th>
             <th>Email</th>
-            <th>Membership type</th>
+            <th>Member Since</th>
         </tr>
         <% for session in @session.members()%>
         <tr>
             <td><%= session.full_name()%></td>
             <td><%= session.email%></td>
-            <td><%= session.membership_type%></td>
+            <td><%= session.date_joined%></td>
             </td>
         <% end %>
         </tr>

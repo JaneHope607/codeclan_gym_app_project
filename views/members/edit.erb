@@ -33,14 +33,6 @@
             <input id="date-joined" value=<%= @member.date_joined%> type="date" name="date_joined"/>
         </div>
 
-        <div class="form-el">
-            <label for="membership_select">Memerbship Type:</label>
-            <select name="membership_type" id="membership_select">
-                <option value="Premium" <%= "selected" if @member.membership_type == "Premium"%>>Premium</option>
-                <option value="Standard" <%= "selected" if @member.membership_type == "Standard"%>>Standard</option>
-            </select>
-        </div>
-
         <div class="fomr-el">
             <input class="btn" type="submit" value="Update Member"/>
         </div>
