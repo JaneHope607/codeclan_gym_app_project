@@ -1,4 +1,4 @@
-# codeclan_gym_app_project
+# Gym App - Project
 
 # Summary:
 
@@ -32,3 +32,18 @@ Possible Extensions
 Classes could have a maximum capacity, and users can only be added while there is space remaining - DONE
 The gym could be able to give its members Premium or Standard membership. Standard members can only be signed up for classes during off-peak hours.
 The Gym could mark members and classes as active/deactivated. Deactivated members/classes will not appear when creating bookings.
+
+# How To Open
+- Clone the repo and save it to your local computer.
+- Create a local database in PostgreSQL and name it gym_system.
+- Navigate to the repo in your console.
+- Run the following, which will populate the db with seed data:
+    psql -d gym_system -f db/gym_system.sql
+    ruby seeds.rb
+- Visit 'http://localhost:4567/' in your browser.
+
+Prerequisites
+- You will need the following ruby gems installed:
+  Sinatra
+  pg
+  pry-byebug
