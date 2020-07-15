@@ -164,3 +164,8 @@ h2 {
 .class-box a {
     color: midnightblue;
 }
+
+h3 {
+    font-size: 1.5em;
+    margin-left: 2em;
+}

@@ -1,6 +1,6 @@
 <h2>Edit Class Details:</h2>
 
-<form method="post" action="/classes/<%= @gym_class.id%>">
+<form autocomplete="off" method="post" action="/classes/<%= @gym_class.id%>">
     <div class="form-wrapper">
 
         <div class="form-el">
@@ -20,7 +20,14 @@
 
         <div class="form-el">
             <label for="instructor">Instructor:</label>
-            <input id="instructor" value=<%= @gym_class.instructor%> type="text" name="instructor"/>
+            <select id="instructor" name="instructor" value=<%= @gym_class.instructor%>>
+                <option value="Mark Smith" <%= "selected" if @gym_class.instructor == "Mark Smith"%>>Mark Smith</option>
+                <option value="Aaron Johnson" <%= "selected" if @gym_class.instructor == "Aaron Johnson"%>>Aaron Johnson</option>
+                <option value="Emily Watson" <%= "selected" if @gym_class.instructor == "Emily Watson"%>>Emily Watson</option>
+                <option value="Michelle Black" <%= "selected" if @gym_class.instructor == "Michelle Black"%>>Michelle Black</option>
+                <option value="William Blake" <%= "selected" if @gym_class.instructor == "William Blake"%>>William Blake</option>
+                <option value="Troy Bolton " <%= "selected" if @gym_class.instructor == "Troy Bolton"%>>Troy Bolton</option>
+            </select>
         </div>
     
         <div class="btn-container">

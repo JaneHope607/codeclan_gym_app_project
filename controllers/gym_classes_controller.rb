@@ -42,9 +42,9 @@ end
 # UPDATE
 
 post '/classes/:id' do
-    gym_class = GymClass.new(params)
-    gym_class.update()
-    redirect to "/classes/#{params['id']}"
+    @gym_class = GymClass.new(params)
+    @gym_class.update()
+    redirect to "/classes"
 end
 
 # DELETE

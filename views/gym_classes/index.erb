@@ -1,4 +1,4 @@
-<h1>All Active Classes</h1>
+<h1>All Classes</h1>
 
 <a href="/classes/new" class="create">Add New Class</a>
 
@@ -6,7 +6,7 @@
 <% for gym_class in @gym_classes%>
     <div class="class-box">
         <p class="name">Class Name: <%= gym_class.name%></p>
-        <p>Duration: <%= gym_class.duration%></p>
+        <p>Duration: <%= gym_class.duration%> mins</p>
         <p>Instructor: <%= gym_class.instructor%></p>
         <p><a href="/classes/<%= gym_class.id%>/sessions">Show All Sessions >></a></p>
 

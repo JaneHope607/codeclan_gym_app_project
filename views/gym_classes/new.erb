@@ -1,6 +1,6 @@
-<h2>New Class:</h2>
+<h3 class=add>Add New Class:</h3>
     
-<form method="post" action="/classes">
+<form autocomplete="off" method="post" action="/classes">
     <div class="form-wrapper">
 
         <div class="form-el">
@@ -20,7 +20,14 @@
 
         <div class="form-el">
             <label for="instructor">Instructor:</label>
-            <input id="instructor" type="text" name="instructor"/>
+            <select id="instructor" name="instructor">
+                <option value="Mark Smith">Mark Smith</option>
+                <option value="Aaron Johnson">Aaron Johnson</option>
+                <option value="Emily Watson">Emily Watson</option>
+                <option value="Michelle Black">Michelle Black</option>
+                <option value="William Blake">William Blake</option>
+                <option value="Troy Bolton ">Troy Bolton</option>
+            </select>
         </div>
 
         <div class="btn-container">

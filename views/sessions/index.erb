@@ -1,159 +1,262 @@
-<a href="/sessions/new">Add New Session</a>
+<h1>Timetable</h1>
 
-<h1>All Sessions</h1>
+<a href="/sessions/new" class="create">Add New Session</a>
 
 <h2>Monday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
 <% for session in @sessions%>
-    <% if session.day == 1%></p>
-        <p>Class Name: <%= session.gym_class.name%></p>
-        <p>Instructor: <%= session.gym_class.instructor%></p>
-        <p>Start Time: <%= session.start_time%></p>
-        <p>Duration: <%= session.gym_class.duration%> mins</p>
-        <p>Spaces Available: <%= session.remaining_spaces()%></p>
-        <p>Number Members Booked: <%= session.members.count%></p>
+    <% if session.day == 1%>
+        <tr>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
-
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-
-    <hr/>
     <% end %>
 <% end %>
+</table>
 
 <h2>Tuesday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
 <% for session in @sessions%>
-    <% if session.day == 2%></p>
-    <p>Class Name: <%= session.gym_class.name%></p>
-    <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Start Time: <%= session.start_time%></p>
-    <p>Duration: <%= session.gym_class.duration%> mins</p>
-    <p>Spaces Available: <%= session.remaining_spaces()%></p>
+    <% if session.day == 2%>
+        <tr>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <p>Number Members Booked: <%= session.members.count%></p>
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-    <hr/>
     <% end %>
 <% end %>
+</table>
 
 <h2>Wednesday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
 <% for session in @sessions%>
-    <% if session.day == 3%></p>
-    <p>Class Name: <%= session.gym_class.name%></p>
-    <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Start Time: <%= session.start_time%></p>
-    <p>Duration: <%= session.gym_class.duration%> mins</p>
-    <p>Spaces Available: <%= session.remaining_spaces()%></p>
+    <% if session.day == 3%>
+        <tr>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <p>Number Members Booked: <%= session.members.count%></p>
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-    <hr/>
     <% end %>
 <% end %>
+</table>
 
 <h2>Thursday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
 <% for session in @sessions%>
-    <% if session.day == 4%></p>
-    <p>Class Name: <%= session.gym_class.name%></p>
-    <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Start Time: <%= session.start_time%></p>
-    <p>Duration: <%= session.gym_class.duration%> mins</p>
-    <p>Spaces Available: <%= session.remaining_spaces()%></p>
+    <% if session.day == 4%>
+        <tr>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <p>Number Members Booked: <%= session.members.count%></p>
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-    <hr/>
     <% end %>
 <% end %>
+</table>
 
 <h2>Friday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
 <% for session in @sessions%>
-    <% if session.day == 5%></p>
-    <p>Class Name: <%= session.gym_class.name%></p>
-    <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Start Time: <%= session.start_time%></p>
-    <p>Duration: <%= session.gym_class.duration%> mins</p>
-    <p>Spaces Available: <%= session.remaining_spaces()%></p>
+    <% if session.day == 5%>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <p>Number Members Booked: <%= session.members.count%></p>
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-    <hr/>
     <% end %>
 <% end %>
+</table>
 
 <h2>Saturday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
 <% for session in @sessions%>
-    <% if session.day == 6%></p>
-    <p>Class Name: <%= session.gym_class.name%></p>
-    <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Start Time: <%= session.start_time%></p>
-    <p>Duration: <%= session.gym_class.duration%> mins</p>
-    <p>Spaces Available: <%= session.remaining_spaces()%></p>
+    <% if session.day == 6%>
+        <tr>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <p>Number Members Booked: <%= session.members.count%></p>
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-    <hr/>
     <% end %>
 <% end %>
+</table>
 
 <h2>Sunday Sessions:</h2>
+<table class="table-wrapper">
+        <tr>
+            <th>Class Name</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Spaces Available</th>
+            <th>Number Bookings</th>
+            <th></th>
+            <th></th>
+        </tr>
 <% for session in @sessions%>
-    <% if session.day == 7%></p>
-    <p>Class Name: <%= session.gym_class.name%></p>
-    <p>Instructor: <%= session.gym_class.instructor%></p>
-    <p>Start Time: <%= session.start_time%></p>
-    <p>Duration: <%= session.gym_class.duration%> mins</p>
-    <p>Spaces Available: <%= session.remaining_spaces()%></p>
+    <% if session.day == 7%>
+        <tr>
+            <td><%= session.gym_class.name%></td>
+            <td><%= session.start_time%></td>
+            <td><%= session.gym_class.duration%> mins</td>
+            <td><%= session.remaining_spaces()%></td>
+            <td><%= session.members.count%></td>
+            <td>
+                <form method="get" action="/sessions/<%=session.id%>/edit">
+                    <input class="btn" type="submit" value="Update Session"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="/sessions/<%= session.id%>/delete">
+                    <input class="btn" type="submit" value="Delete Session"/>
+                </form>
+            </td>
 
-    <p>Number Members Booked: <%= session.members.count%></p>
-    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-    <form method="get" action="/sessions/<%=session.id%>/edit">
-        <input type="submit" value="Update Session"/>
-    </form>
+        </tr>
+ <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
-    <form method="post" action="/sessions/<%= session.id%>/delete">
-        <input type="submit" value="Delete Session"/>
-    </form>
-    <hr/>
     <% end %>
 <% end %>
+</table>
