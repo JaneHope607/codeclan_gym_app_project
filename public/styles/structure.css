@@ -75,12 +75,6 @@ ul li a:hover {
     max-width: 100%;
 }
 
-.box {
-    padding: 20px;
-    border: 2px solid #4d4d4d;;
-    margin: 20px;
-}
-
 a {
     text-decoration: none;
     color: #4d4d4d;
@@ -122,7 +116,7 @@ h2 {
     border: 1.5px solid #4d4d4d;
     margin: 1em;
     background-color: rgb(241, 238, 238);
-    display: inline-flex;
+    display: flex;
 }
 
 .member-box p {
@@ -140,13 +134,14 @@ h2 {
 }
 
 .name {
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: black;
     font-style: bold;
 }
 
 .class-list  {
     margin-top: 4em;
+    display: block;
 }
 
 .class-box {
@@ -168,4 +163,66 @@ h2 {
 h3 {
     font-size: 1.5em;
     margin-left: 2em;
+}
+
+.show-link {
+    color: midnightblue;
+    font-size: 1.3em;
+}
+
+.day {
+    font-size: 1.4em;
+    text-decoration: underline;
+    color: black;
+}
+
+img {
+    align-self: center;
+    width: 600px;
+    height: auto;
+    text-align: center;
+}
+
+.main {
+    display: block;
+    text-align: center;
+}
+
+.box {
+    width: 15%;
+    background-color: rgb(221, 181, 4);
+    padding: 1em;
+    border-radius: 5%;
+    margin-left: 40px;
+    margin-top: 1em;
+    font-style: bold;
+    transition: all 350ms ease-out;
+    display: inline-flex;
+}
+
+.box a {
+    color: white;
+    text-align: center;
+}
+
+.box:hover {
+    color: whitesmoke;
+    background-color: darkslategrey;
+}
+
+.more-info {
+    color: black;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.details {
+    margin-left: 2em;
+}
+
+.link-back {
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    font-size: 1.1em;
+    color: rgb(65, 4, 65);
 }

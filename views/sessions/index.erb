@@ -2,7 +2,7 @@
 
 <a href="/sessions/new" class="create">Add New Session</a>
 
-<h2>Monday Sessions:</h2>
+<h2 class="day">Monday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -20,26 +20,27 @@
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
 
     <% end %>
 <% end %>
 </table>
 
-<h2>Tuesday Sessions:</h2>
+<h2 class="day">Tuesday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -60,12 +61,12 @@
             <td><%= session.members.count%></td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 
@@ -76,7 +77,7 @@
 <% end %>
 </table>
 
-<h2>Wednesday Sessions:</h2>
+<h2 class="day">Wednesday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -97,12 +98,12 @@
             <td><%= session.members.count%></td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 
@@ -113,7 +114,7 @@
 <% end %>
 </table>
 
-<h2>Thursday Sessions:</h2>
+<h2 class="day">Thursday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -134,12 +135,12 @@
             <td><%= session.members.count%></td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 
@@ -150,7 +151,7 @@
 <% end %>
 </table>
 
-<h2>Friday Sessions:</h2>
+<h2 class="day">Friday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -171,12 +172,12 @@
             <td><%= session.members.count%></td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 
@@ -187,7 +188,7 @@
 <% end %>
 </table>
 
-<h2>Saturday Sessions:</h2>
+<h2 class="day">Saturday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -208,12 +209,12 @@
             <td><%= session.members.count%></td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 
@@ -224,7 +225,7 @@
 <% end %>
 </table>
 
-<h2>Sunday Sessions:</h2>
+<h2 class="day">Sunday Sessions:</h2>
 <table class="table-wrapper">
         <tr>
             <th>Class Name</th>
@@ -245,12 +246,12 @@
             <td><%= session.members.count%></td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
-                    <input class="btn" type="submit" value="Update Session"/>
+                    <input class="btn-edit" type="submit" value="Edit"/>
                 </form>
             </td>
             <td>
                 <form method="post" action="/sessions/<%= session.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Session"/>
+                    <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
 

@@ -20,7 +20,7 @@
             <td><%= booking.session.get_day()%></td>
             <td><%= booking.session.start_time%></td>
             <td><form method="post" action="/bookings/<%= booking.id%>/delete">
-                    <input class="btn" type="submit" value="Delete Booking"/>
+                    <input class="btn-delete" type="submit" value="Delete Booking"/>
                 </form></td>
         <% end %>
         </tr>

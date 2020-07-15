@@ -1,17 +1,15 @@
-<h2>Add New Session:</h2>
+<h3 class="add">Add New Session:</h3>
 
 <form autocomplete="off" method="post" action="/sessions">
      <div class="form-wrapper">
     
         <div class="form-el">
-            <label>
-            Select Class:
+            <label>Select Class:</label>
             <select name="gymclass_id">
                 <% for gym_class in @classes%>
                     <option value="<%= gym_class.id%>"><%= gym_class.name%></option>
                 <% end %>
             </select>
-            </label>
         </div>
 
         <div class="form-el">
@@ -37,7 +35,7 @@
             <input id="capacity" type="number" name="capacity" min="0" max="50"/>
         </div>
     
-         <div class="btn-container">
+         <div class="fomr-el">
             <input class="btn" type="submit" value="Create Session"/>
         </div>
     </div>

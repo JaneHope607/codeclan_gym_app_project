@@ -8,7 +8,7 @@
         <p class="name">Class Name: <%= gym_class.name%></p>
         <p>Duration: <%= gym_class.duration%> mins</p>
         <p>Instructor: <%= gym_class.instructor%></p>
-        <p><a href="/classes/<%= gym_class.id%>/sessions">Show All Sessions >></a></p>
+        <p><a href="/classes/<%= gym_class.id%>/sessions" class="show-link">Show All Sessions >></a></p>
 
         <div class="btn-container">
             <form method="get" action="/classes/<%= gym_class.id%>/edit">

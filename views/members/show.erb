@@ -1,9 +1,9 @@
-<h1>Member Profile:</h1>
-    <p>Name: <%= @member.full_name()%></p>
-    <p>Date Of Birth: <%= @member.dob%></p>
-    <p>Contact Email: <%= @member.email%></p>
-    <p>Phone Number: <%= @member.number%></p>
-    <p>Member Since: <%= @member.date_joined%></p>
-    <p>Memerbship Type: <%= @member.membership_type%></p>
+<h2 class="more-info">Member Profile:</h2>
+    <p class="details">Name: <%= @member.full_name()%></p>
+    <p class="details">Date Of Birth: <%= @member.dob%></p>
+    <p class="details">Contact Email: <%= @member.email%></p>
+    <p class="details">Phone Number: <%= @member.number%></p>
+    <p class="details">Member Since: <%= @member.date_joined%></p>
+    <p class="details">Memerbship Type: <%= @member.membership_type%></p>
 
-    <a href="/members">Back To All Members</a>
+    <a class="link-back" href="/members"><i class="arrow left"></i> Back To All Members</a>

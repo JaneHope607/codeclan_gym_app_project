@@ -1,9 +1,8 @@
-    <p>Class: <%= @session.gym_class.name%></p>
-    <p>Day: <%= @session.get_day()%></p>
-    <p>Start Time: <%= @session.start_time%></p>
-    <p>Instructor: <%= @session.gym_class.instructor%></p>
-    <p>Capacity: <%= @session.capacity%></p>
-    <p>Remaining Spaces: <%= @session.remaining_spaces()%></p>
+<h2 class="more-info">Class: <%= @session.gym_class.name%></h2>
+    <p class="details">Day: <%= @session.get_day()%> @ <%= @session.start_time%></p>
+    <p class="details">Instructor: <%= @session.gym_class.instructor%></p>
+    <p class="details">Capacity: <%= @session.capacity%></p>
+    <p class="details">Remaining Spaces: <%= @session.remaining_spaces()%></p>
 
     <h2>Bookings</h2>
 
