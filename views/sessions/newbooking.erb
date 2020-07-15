@@ -5,24 +5,11 @@
 
     <div class="form-wrapper">
 
-    <label for="select a session:">Select a Session:
-      <select name="session_id">
-        <% for session in @sessions %>
-          <option
-          <%= 'selected'if session.id == @session.id%>
-          value="<%= session.id %>"> <%= session.gym_class.name %> <%= session.get_day() %> <%= session.start_time %>
-        </option>
-        <% end %>
-      </select>
-  </label>
+    <input type="hidden" name="session_id" id="session_id" value="<%=@session.id%>">
 
-        <div class="form-el">   
-             <% if @session.members.count < @session.capacity %>
-                <%= @session.id %>
-                <%= @session.gym_class.name %>
-                <%= @session.get_day %>
-                <%= @session.start_time %>
-                <% end %>
+        <%= @session.gym_class.name %>
+        <%= @session.get_day %>
+        <%= @session.start_time %>
         </div>
 
         <div class="form-el">   

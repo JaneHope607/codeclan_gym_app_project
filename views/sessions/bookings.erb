@@ -8,7 +8,11 @@
     <h2>Bookings</h2>
 
 <div class="newsession">
-    <p><a href="/sessions/<%= @session.id %>/newbooking">Enroll Member</a>
+<% if @session.remaining_spaces < 0%>
+    <p>This session is fully booked!</p>
+<% else %>
+     <p><a href="/sessions/<%= @session.id %>/newbooking">Enroll Member</a>
+<% end%>
     
     <table>
         <tr>
