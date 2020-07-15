@@ -1,10 +1,10 @@
 # codeclan_gym_app_project
 
-Summary:
+# Summary:
 
 A system which would be used by a gym manager to help manage their gym
 
-Technologies Used:
+# Technologies Used:
 
 - HTML/CSS (front end)
 - Sinatra (front end)
@@ -13,7 +13,7 @@ Technologies Used:
 - PostgreSQL (back end)
 
 
-The Brief: 
+# The Brief: 
 
 Gym
 A local gym has asked you to build a piece of software to help them to manage memberships, and register members for classes.
