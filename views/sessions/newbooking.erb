@@ -1,0 +1,43 @@
+<h1>New Booking</h1>
+
+<form action="/bookings" method="post">
+
+
+    <div class="form-wrapper">
+
+    <label for="select a session:">Select a Session:
+      <select name="session_id">
+        <% for session in @sessions %>
+          <option
+          <%= 'selected'if session.id == @session.id%>
+          value="<%= session.id %>"> <%= session.gym_class.name %> <%= session.get_day() %> <%= session.start_time %>
+        </option>
+        <% end %>
+      </select>
+  </label>
+
+        <div class="form-el">   
+             <% if @session.members.count < @session.capacity %>
+                <%= @session.id %>
+                <%= @session.gym_class.name %>
+                <%= @session.get_day %>
+                <%= @session.start_time %>
+                <% end %>
+        </div>
+
+        <div class="form-el">   
+            <label for="member">Select A Member:</label>
+            <select name="member_id" id="member_id">
+                <% for member in @members%>
+                    <option value="<%= member.id%>"><%= member.full_name()%></option>
+                <% end %>
+            </select>
+        </div>
+
+     <input type="submit" value="Make Booking">
+    
+    </div>
+
+    <a href="/bookings"> All Bookings>></a>
+     
+</form>

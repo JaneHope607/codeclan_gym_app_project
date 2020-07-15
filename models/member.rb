@@ -93,6 +93,17 @@ class Member
         return Session.map_items(results)
     end
 
+     # Method to find all bookings for member
+
+    def bookings()
+        sql = "SELECT *
+        FROM bookings
+        WHERE bookings.member_id = $1"
+        values = [@id]
+        results = SqlRunner.run(sql, values)
+        return Booking.map_items(results)
+    end
+
     # Deletes bookings for a member (if member gets deleted)
 
     def delete_bookings()

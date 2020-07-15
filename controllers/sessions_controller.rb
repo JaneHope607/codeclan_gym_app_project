@@ -68,3 +68,10 @@ get '/sessions/:id/bookings' do
     erb(:"sessions/bookings")
 end
 
+get '/sessions/:id/newbooking' do
+    @sessions = Session.find_all()
+    @session = Session.find_by_id(params['id'].to_i)
+    @members = Member.find_all()
+    erb(:"sessions/newbooking")
+end
+

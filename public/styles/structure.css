@@ -77,7 +77,7 @@ ul li a:hover {
 
 .box {
     padding: 20px;
-    border: 2px solid rgb(136, 118, 38);
+    border: 2px solid #4d4d4d;;
     margin: 20px;
 }
 
@@ -112,4 +112,55 @@ h2 {
 .create:hover {
     color: whitesmoke;
     background-color: darkslategrey;
+}
+
+.members-list  {
+    margin-top: 4em;
+}
+
+.member-box {
+    border: 1.5px solid #4d4d4d;
+    margin: 1em;
+    background-color: rgb(241, 238, 238);
+    display: inline-flex;
+}
+
+.member-box p {
+    margin-left: 2em;
+    font-weight: bold;
+}
+
+.member-box a {
+    color: midnightblue;
+}
+
+.member-box .btn-container {
+    padding: 1em;
+    align-content: center;
+}
+
+.name {
+    font-size: 1.3em;
+    color: black;
+    font-style: bold;
+}
+
+.class-list  {
+    margin-top: 4em;
+}
+
+.class-box {
+    border: 1.5px solid #4d4d4d;
+    margin: 1em;
+    background-color: rgb(241, 238, 238);
+}
+
+.class-box p {
+    margin-left: 1.5em;
+    font-weight: bold;
+}
+
+
+.class-box a {
+    color: midnightblue;
 }

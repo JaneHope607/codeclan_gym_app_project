@@ -1,25 +1,28 @@
-<a href="/members/new">Add New Member</a>
+<h1>All Members</h1>
 
+<a href="/members/new" class="create">Add New Member</a>
+
+<div class="members-list">
 <% for member in @members%>
-    <p>Name: <%= member.full_name()%></p>
-    <p>Membership Type: <%= member.membership_type%></p>
-    <p>Contact Email: <%= member.email%></p>
-    <p><a href="/members/<%= member.id%>">Full profile</a></p>
-    <p><a href="/members/<%= member.id%>/bookings">Classes Booked</a></p>
+    <div class="member-box">
+        <p class="name">Name: <%= member.full_name()%></p>
+        <p>Contact Email: <%= member.email%></p>
+        <p><a href="/members/<%= member.id%>">Full profile >></a></p>
+        <p><a href="/members/<%= member.id%>/bookings">Classes Booked >></a></p>
 
     
-    <div class="btn-container">
-        <form method="get" action="/members/<%=member.id%>/edit">
-            <input class="btn" type="submit" value="Edit Member"/>
-        </form>
-    </div>
+        <div class="btn-container">
+            <form method="get" action="/members/<%=member.id%>/edit">
+                <input class="btn" type="submit" value="Edit Member"/>
+            </form>
+        </div>
 
-    <div class="btn-container">
-        <form method="post" action="/members/<%=member.id%>/delete">
-            <input class="btn" type="submit" value="Deactivate Member"/>
-        </form>
+        <div class="btn-container">
+            <form method="post" action="/members/<%=member.id%>/delete">
+                <input class="btn" type="submit" value="Deactivate Member"/>
+            </form>
+        </div>
     </div>
-
-    <hr/>
 
 <% end%>
+</div>

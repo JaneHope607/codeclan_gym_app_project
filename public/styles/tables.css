@@ -1,10 +1,12 @@
 td, th {
     text-align: left;
+    border: 2px solid #4d4d4d;
   }
   
   td {
     padding: 5px 60px 10px 10px;
     border-left: 2px solid #4d4d4d;
+    border: 2px solid #4d4d4d;
   }
   
   th {
