@@ -1,6 +1,6 @@
-<a href="/bookings/new">Create New Booking</a>
-
 <h1>All Bookings</h1>
+
+<a href="/bookings/new" class="create">Create New Booking</a>
 
     <table class="table-wrapper">
         <tr>
@@ -9,6 +9,7 @@
             <th>Class</th>
             <th>Day</th>
             <th>Session Time</th>
+            <th></th>
         </tr>
 
         <% for booking in @bookings%>
@@ -24,6 +25,5 @@
         <% end %>
         </tr>
     </table>
-<hr/>
-<a href="/bookings/new">Create New Booking</a>
+
 

@@ -1,12 +1,13 @@
 .btn {
-    background-color: midnightblue;
-    text-align: center;
-    border-radius: 15px;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    padding: 8px 12px;
+    background-color: darkslategrey;
     color: white;
-    margin: 5px;
+    padding: .5em;
+    border-radius: 5%;
+    margin-left: 40px;
+    font-style: bold;
+    transition: all 350ms ease-out;
+    cursor:pointer;
+    }
 }
 
 .btn:hover {

@@ -7,6 +7,7 @@
             <th>Day</th>
             <th>Start Time</th>
             <th>Duration</th>
+            <th>Bookings</th>
             <th>Spaces Available</th>
         </tr>
         <% @gym_class.sessions.each do |gym_class|%>
@@ -14,6 +15,7 @@
             <td><%= gym_class.get_day()%></td>
             <td><%= gym_class.start_time%></td>
             <td><%= gym_class.gym_class.duration()%> mins </td>
+            <td><%= gym_class.members.count()%></td>
             <td><%= gym_class.remaining_spaces()%></td>
         </tr>
         <% end %>

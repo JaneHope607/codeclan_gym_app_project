@@ -1,4 +1,4 @@
-.form-el {
+.form-wrapper {
     display: block;
     max-width: 100%;
     height: auto;
@@ -9,11 +9,15 @@
 
 label {
     display: block;
-    color: white;
+    color: blueviolet;
     font-family: 'Raleway', sans-serif;
     text-align: left;
     font-weight: 500;
     padding: .25rem;
     margin-right: 15px;
+  }
+
+  input {
+    background-color: red;
   }
   

@@ -31,7 +31,6 @@ post '/bookings' do
     if @bookingexists
         erb(:"bookings/error")
     # elsif @peak = @bookings.detect { |booking| }
-
     else
         booking = Booking.new(params)
         booking.save()
