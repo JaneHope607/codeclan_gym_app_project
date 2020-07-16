@@ -6,7 +6,7 @@
 
 
 <div class="newsession">
-<% if @session.remaining_spaces < 0%>
+<% if @session.remaining_spaces == 0 %>
     <p>This session is fully booked!</p>
 <% else %>
      <p><a href="/sessions/<%= @session.id %>/newbooking" class="create">Enroll Member</a>
