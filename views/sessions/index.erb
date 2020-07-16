@@ -21,7 +21,7 @@
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
             <td><%= session.members.count%>
-                    <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>More Details>></em></a>
             </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
@@ -33,9 +33,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
-
     <% end %>
 <% end %>
 </table>
@@ -58,7 +56,9 @@
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>More Details>></em></a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
                     <input class="btn-edit" type="submit" value="Edit"/>
@@ -69,10 +69,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <% end %>
 <% end %>
 </table>
@@ -95,7 +92,9 @@
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>More Details>></em></a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
                     <input class="btn-edit" type="submit" value="Edit"/>
@@ -106,10 +105,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <% end %>
 <% end %>
 </table>
@@ -132,7 +128,9 @@
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>More Details>></em></a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
                     <input class="btn-edit" type="submit" value="Edit"/>
@@ -143,10 +141,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <% end %>
 <% end %>
 </table>
@@ -162,14 +157,16 @@
             <th></th>
             <th></th>
         </tr>
-        <tr>
 <% for session in @sessions%>
     <% if session.day == 5%>
+        <tr>
             <td><%= session.gym_class.name%></td>
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>More Details>></em></a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
                     <input class="btn-edit" type="submit" value="Edit"/>
@@ -180,10 +177,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <% end %>
 <% end %>
 </table>
@@ -206,7 +200,9 @@
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>More Details>></em></a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
                     <input class="btn-edit" type="submit" value="Edit"/>
@@ -217,10 +213,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <% end %>
 <% end %>
 </table>
@@ -243,7 +236,9 @@
             <td><%= session.start_time%></td>
             <td><%= session.gym_class.duration%> mins</td>
             <td><%= session.remaining_spaces()%></td>
-            <td><%= session.members.count%></td>
+            <td><%= session.members.count%>
+                <a class="show" href="/sessions/<%=session.id%>/bookings"><em>more Details>></em></a>
+            </td>
             <td>
                 <form method="get" action="/sessions/<%=session.id%>/edit">
                     <input class="btn-edit" type="submit" value="Edit"/>
@@ -254,10 +249,7 @@
                     <input class="btn-delete" type="submit" value="Delete"/>
                 </form>
             </td>
-
         </tr>
- <a href="/sessions/<%=session.id%>/bookings">Show Members Booked</a>
-
     <% end %>
 <% end %>
 </table>

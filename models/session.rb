@@ -103,13 +103,13 @@ class Session
         @capacity -= members.count()
     end
 
-    def reduce_capacity()
-        @capacity -= 1
-    end
+    # def reduce_capacity()
+    #     @capacity -= 1
+    # end
 
-    def increase_capacity()
-        @capacity += 1
-    end
+    # def increase_capacity()
+    #     @capacity += 1
+    # end
 
     # Gets the number represesenting day of week and turns into string of day 
     

@@ -231,3 +231,8 @@ img {
 .class-name {
     text-align: left;
 }
+
+.show {
+    color: rgb(65, 4, 65);
+    float: right;
+}
