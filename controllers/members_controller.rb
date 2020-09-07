@@ -3,6 +3,8 @@ require('sinatra/contrib/all') if development?
 require_relative('../models/member.rb')
 require_relative('../models/booking.rb')
 require_relative('../models/session.rb')
+require_relative('../db/sql_runner.rb')
+
 
 # INDEX
 

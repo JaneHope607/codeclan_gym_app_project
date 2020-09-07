@@ -1,6 +1,8 @@
 require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('../models/gymclass.rb')
+require_relative('../db/sql_runner.rb')
+
 
 # INDEX
 
