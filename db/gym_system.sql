@@ -9,7 +9,6 @@ CREATE TABLE members (
     last_name VARCHAR (255) not null,
     dob VARCHAR(255),
     email VARCHAR(255) not null,
-    number VARCHAR(15) not null,
     date_joined VARCHAR(255)
 );
 

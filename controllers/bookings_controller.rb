@@ -44,10 +44,3 @@ post '/bookings/:id/delete' do
     booking.delete()
     redirect to "/bookings"
 end
-
-# SEE AVAILABLE SESSIONS - no longer needed
-
-# get '/bookings/new/:id/sessions' do
-#     @gym_class = GymClass.find_by_id(params['id'].to_i)
-#     erb(:"bookings/sessions")
-# end

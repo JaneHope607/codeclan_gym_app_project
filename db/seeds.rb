@@ -14,7 +14,6 @@ member1 = Member.new({
     "last_name" => "Smith",
     "dob" => "1978-11-12",
     "email" => "jesssmith@gmail.com",
-    "number" => "07863738838",
     "date_joined" => "2020-07-12"
 })
 
@@ -23,7 +22,6 @@ member2 = Member.new({
     "last_name" => "Gray",
     "dob" => "1982-02-18",
     "email" => "emmagray@gmail.com",
-    "number" => "07898282828",
     "date_joined" => "2020-07-13"
 })
 
@@ -32,7 +30,6 @@ member3 = Member.new({
     "last_name" => "Evans",
     "dob" => "1990-07-24",
     "email" => "louisevans@gmail.com",
-    "number" => "07812323343",
     "date_joined" => "2020-07-11"
 })
 
@@ -41,7 +38,6 @@ member4 = Member.new({
     "last_name" => "Short",
     "dob" => "1995-10-10",
     "email" => "robertshort@gmail.com",
-    "number" => "07123228826",
     "date_joined" => "2020-07-10"
 })
 
@@ -94,45 +90,59 @@ session1 = Session.new({
 })
 
 session2 = Session.new({
+    "gymclass_id" => gymclass1.id,
+    "day" => "1",
+    "start_time" => "11:30",
+    "capacity" => "10"
+})
+
+session3 = Session.new({
     "gymclass_id" => gymclass4.id,
     "day" => "4",
     "start_time" => "14:00",
     "capacity" => "20"
 })
 
-session3 = Session.new({
+session4 = Session.new({
     "gymclass_id" => gymclass4.id,
     "day" => "5",
     "start_time" => "12:30",
     "capacity" => "20"
 })
 
-session4 = Session.new({
+session5 = Session.new({
     "gymclass_id" => gymclass1.id,
     "day" => "3",
     "start_time" => "11:00",
     "capacity" => "10"
 })
 
-session5 = Session.new({
+session6 = Session.new({
     "gymclass_id" => gymclass2.id,
     "day" => "7",
     "start_time" => "14:30",
     "capacity" => "10"
 })
 
-session6 = Session.new({
+session7 = Session.new({
     "gymclass_id" => gymclass3.id,
     "day" => "2",
     "start_time" => "12:30",
     "capacity" => "20"
 })
 
-session7 = Session.new({
+session8 = Session.new({
     "gymclass_id" => gymclass3.id,
     "day" => "5",
     "start_time" => "15:45",
     "capacity" => "15"
+})
+
+session9 = Session.new({
+    "gymclass_id" => gymclass5.id,
+    "day" => "6",
+    "start_time" => "11:45",
+    "capacity" => "8"
 })
 
 session1.save()
@@ -142,6 +152,8 @@ session4.save()
 session5.save()
 session6.save()
 session7.save()
+session8.save()
+session9.save()
 
 booking1 = Booking.new({
     "session_id" => session1.id,
@@ -179,17 +191,6 @@ booking3.save()
 booking4.save()
 booking5.save()
 booking6.save()
-
-# member1.first_name = "Jane"
-# member1.update()
-
-# session1.capacity = "25"
-# session1.update()
-
-# gymclass2.duration = '35'
-# gymclass2.update()
-
-# session1.delete()
 
 binding.pry
 nil
