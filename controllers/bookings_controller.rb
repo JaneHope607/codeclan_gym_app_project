@@ -1,10 +1,9 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('../models/booking.rb')
 require_relative('../models/member.rb')
 require_relative('../models/gymclass.rb')
 require_relative('../models/session.rb')
-also_reload('../models/*')
 
 # INDEX
 

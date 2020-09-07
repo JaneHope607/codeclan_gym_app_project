@@ -2,7 +2,6 @@ require_relative("../models/member.rb")
 require_relative("../models/gymclass.rb")
 require_relative("../models/session.rb")
 require_relative("../models/booking.rb")
-require("pry-byebug")
 
 Booking.delete_all()
 Session.delete_all()
@@ -191,6 +190,3 @@ booking3.save()
 booking4.save()
 booking5.save()
 booking6.save()
-
-binding.pry
-nil
