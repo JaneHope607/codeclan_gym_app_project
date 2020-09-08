@@ -34,16 +34,5 @@ The gym could be able to give its members Premium or Standard membership. Standa
 The Gym could mark members and classes as active/deactivated. Deactivated members/classes will not appear when creating bookings.
 
 # How To Open
-- Clone the repo and save it to your local computer.
-- Create a local database in PostgreSQL and name it gym_system.
-- Navigate to the repo in your console.
-- Run the following, which will populate the db with seed data:
-    psql -d gym_system -f db/gym_system.sql
-    ruby seeds.rb
-- Visit 'http://localhost:4567/' in your browser.
 
-Prerequisites
-- You will need the following ruby gems installed:
-  Sinatra
-  pg
-  pry-byebug
+You can view the app [here](https://total-fitness-gym-app.herokuapp.com/)
